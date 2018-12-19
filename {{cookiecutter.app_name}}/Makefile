@@ -10,6 +10,11 @@ IMAGE_NAME := "{{cookiecutter.docker_hub_username}}/{{cookiecutter.app_name}}"
 
 default: test
 
+regen:
+	rm -rf *
+	rm .*
+	cookiecutter https://github.com/gofunct/cookiecutter-grpcgo.git
+
 .PHONY: setup
 setup: ## download dependencies and tls certificates
 	brew install protobuf
