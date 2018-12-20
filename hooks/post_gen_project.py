@@ -22,23 +22,17 @@ def remove_all_files(filename):
             PROJECT_DIRECTORY, name
         ))
 
-# 1. Remove Dockerfiles if docker is not going to be used
 if '{{ cookiecutter.use_docker }}'.lower() != 'y':
     remove_all_files("Dockerfile")
 
-# 1. Remove Dockerfiles if docker is not going to be used
 if '{{ cookiecutter.use_tls }}'.lower() != 'y':
-    remove_dir("certs")
+    remove_dir("certs/")
 
-# 5. Remove unused ci choice
-if '{{ cookiecutter.use_ci}}'.lower() == 'travis':
-    remove_dir(".circleci")
-elif '{{ cookiecutter.use_ci}}'.lower() == 'circle':
-    remove_file(".travis.yml")
-else:
-    remove_file(".travis.yml")
-    remove_dir(".circleci")
+if '{{ cookiecutter.use_ci}}'.lower() != 'circle':
+    remove_dir(".circleci/")
 
-# 7. Remove files depending on selection of mod or dep
 if '{{ cookiecutter.use_go_mod}}'.lower() != 'y':
     remove_file("go.mod")
+
+if '{{ cookiecutter.use_templates}}'.lower() != 'y':
+    remove_dir("templates/")

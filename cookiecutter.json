@@ -15,5 +15,6 @@
     "use_docker": "y",
     "use_tls": "y",
     "use_go_mod": "y",
-    "use_ci": ["travis", "circle", "none"]
+    "use_templates": "y",
+    "use_ci": ["circle", "none"]
 }
