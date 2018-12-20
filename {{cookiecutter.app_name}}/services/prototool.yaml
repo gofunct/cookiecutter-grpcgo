@@ -3,9 +3,9 @@ protoc:
 
 generate:
   go_options:
-    import_path: github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}
+    import_path: github.com/gofunct/user
   plugins:
   - name: gogoslick
     type: gogo
     flags: plugins=grpc
-    output: .
+    output: ../gen

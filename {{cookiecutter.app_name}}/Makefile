@@ -33,7 +33,7 @@ prototool:
 
 $(TARGETS_TMPL): %_tmpl:
 	git clone -q https://github.com/gofunct/templates.git
-	protoc -I. --gotemplate_out=destination_dir=gen/$(call service_name,$*),template_dir=templates:services "$*"
+	protoc -I. --gotemplate_out=destination_dir=gen/$(call service_name,$*),template_dir=templates:gen "$*"
 	rm -rf templates
 
 build: setup vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
