@@ -2,6 +2,11 @@ syntax = "proto3";
 
 package user;
 
+option go_package = "userpb";
+option java_multiple_files = true;
+option java_outer_classname = "UserProto";
+option java_package = "com.user";
+
 service UserService {
   rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
   rpc GetUser(GetUserRequest) returns (GetUserResponse);
