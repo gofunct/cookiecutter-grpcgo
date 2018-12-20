@@ -2,7 +2,7 @@ package user
 
 import (
 	"fmt"
-	user_pb "github.com/gofunct/example/services/user/gen/pb"
+	user_pb "github.com/gofunct/example/gen/user"
 	"context"
 )
 
@@ -10,7 +10,7 @@ import (
 
 type Service struct{}
 
-func New() user_user_pb.UserServiceServer { return &Service{} }
+func New() user_pb.UserServiceServer { return &Service{} }
 
 func (svc *Service) CreateUser(ctx context.Context, in *user_pb.CreateUserRequest) (*user_pb.CreateUserResponse, error) {
 	return nil, fmt.Errorf("not implemented")

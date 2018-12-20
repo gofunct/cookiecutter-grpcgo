@@ -13,11 +13,12 @@ import (
 	"github.com/go-kit/kit/log"
 	"github.com/gorilla/handlers"
 	"google.golang.org/grpc"
-	user_svc "github.com/gofunct/example/gen/user"
-	user_endpoints "github.com/gofunct/example/services/user/gen/endpoints"
-	user_pb "github.com/gofunct/example/services/user/gen/pb"
-	user_grpctransport "github.com/gofunct/example/services/user/gen/transports/grpc"
-	user_httptransport "github.com/gofunct/example/services/user/gen/transports/http"
+
+	user_pb "github.com/gofunct/example/gen/user"
+	user_endpoints "github.com/gofunct/example/gen/user/endpoints"
+	user_svc "github.com/gofunct/example/services/user"
+	user_grpctransport "github.com/gofunct/example/gen/user/transports/grpc"
+	user_httptransport "github.com/gofunct/example/gen/user/transports/http"
 )
 
 
@@ -34,21 +35,7 @@ func runServer() {
 	errc := make(chan error)
 	s := grpc.NewServer()
 
-	// initialize services
-	{
-		svc := session_svc.New()
-		endpoints := session_endpoints.MakeEndpoints(svc)
-		srv := session_grpctransport.MakeGRPCServer(endpoints)
-		session_pb.RegisterSessionServiceServer(s, srv)
-		session_httptransport.RegisterHandlers(svc, mux, endpoints)
-	}
-	{
-		svc := sprint_svc.New()
-		endpoints := sprint_endpoints.MakeEndpoints(svc)
-		srv := sprint_grpctransport.MakeGRPCServer(endpoints)
-		sprint_pb.RegisterSprintServiceServer(s, srv)
-		sprint_httptransport.RegisterHandlers(svc, mux, endpoints)
-	}
+	// initialize services here...
 	{
 		svc := user_svc.New()
 		endpoints := user_endpoints.MakeEndpoints(svc)
@@ -65,21 +52,21 @@ func runServer() {
 	}()
 
 	go func() {
-		logger := log.With(logger, "transport", "HTTP")
+		logger := log.With(kitLog, "transport", "HTTP")
 		logger.Log("addr", ":"+viper.GetString("http_port"))
 		errc <- http.ListenAndServe(viper.GetString(":"+"http_port"), handlers.LoggingHandler(os.Stderr, mux))
 	}()
 
 	go func() {
-		logger := log.With(logger, "transport", "gRPC")
-		ln, err := net.Listen("tcp", defaultConfig.)
+		logger := log.With(kitLog, "transport", "gRPC")
+		ln, err := net.Listen("tcp", defaultConfig.GetString("grpc_port"))
 		if err != nil {
 			errc <- err
 			return
 		}
-		logger.Log("addr", ":"+viper.GetString("grpc_port"))
+		logger.Log("addr", ":"+defaultConfig.GetString("grpc_port"))
 		errc <- s.Serve(ln)
 	}()
 
-	logger.Log("exit", <-errc)
+	kitLog.Log("exit", <-errc)
 }

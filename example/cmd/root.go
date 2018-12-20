@@ -3,17 +3,17 @@ package cmd
 import (
         "fmt"
         kitlog "github.com/go-kit/kit/log"
+        "github.com/spf13/cobra"
         "github.com/spf13/viper"
         "log"
         "os"
-        "github.com/spf13/cobra"
 )
 
 func init() {Init()}
 
 var (
         defaultConfig *viper.Viper
-        logger  *kitlog.Logger
+        kitLog  kitlog.Logger
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -35,8 +35,8 @@ func GetConfig() *viper.Viper {
         return defaultConfig
 }
 
-func GetLogger() *kitlog.Logger {
-        return logger
+func GetKitLogger() kitlog.Logger {
+        return kitLog
 }
 
 func Init() {
@@ -67,7 +67,7 @@ func Init() {
 
         // If a config file is found, read it in.
         if err := defaultConfig.ReadInConfig(); err != nil {
-                log.Println("failed to read config file, writing defaults...")
+               log.Println("failed to read config file, writing defaults...")
                 if err := defaultConfig.WriteConfigAs("cookiecutter.viper_config_name"+".yaml"); err != nil {
                         log.Fatal("failed to write config")
                         os.Exit(1)
