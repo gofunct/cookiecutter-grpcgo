@@ -84,8 +84,8 @@ clean: ## Clean the directory tree.
 	@test ! -e bin/${BIN_NAME} || rm bin/${BIN_NAME}
 
 certs: ## Generate a server key and certificate
-    openssl genrsa -out certs/server.key 2048
-    openssl req -new -x509 -key server.key -out certs/server.pem -days 3650
+	openssl genrsa -out certs/server.key 2048
+	openssl req -new -x509 -key server.key -out certs/server.pem -days 3650
 
 test: ## Run tests on a compiled project.
 	go test ./...

@@ -37,21 +37,38 @@ Finally, to run it based on this template, type:
 $ cookiecutter https://github.com/gofunct/cookiecutter-grpcgo
 ```
 
+## options
 You will be asked about your basic info (name, project name, app name, etc.). This info will be used to customize your new project.
 
 Warning: After this point, change all default options to your own information.
 
-Answer the prompts with your own desired [options]().
+Answer the prompts with your own desired options.
 
-Enter the project and take a look around:
 ```console
-$ cd echoserver/
-$ ls
-```
+full_name [Coleman Word]: 
+github_username [gofunct]: 
+app_name [example]: 
+project_short_description [example description]: 
+docker_hub_username [gofunct]: 
+docker_image [alpine]: 
+docker_build_image [gofunct/cookiecutter-grpcgo]: 
+Select docker_build_image_version:
+1 - 1.11
+2 - 1.10.3
+3 - 1.9.7
+Choose from 1, 2, 3 [1]: 
+viper_config_name [config]: 
+grpc_port [9090]: 
+http_port [8080]: 
+log_level [debug]: 
+json_logs [y]: 
+use_docker [y]: 
+use_tls [y]: 
+use_go_mod [y]: 
+Select use_ci:
+1 - travis
+2 - circle
+3 - none
+Choose from 1, 2, 3 [1]: 2
 
-Run `make help` to see the available management commands, or just run `make build` to build your project.
-```console
-$ make help
-$ make build
-$ ./bin/echoserver
 ```

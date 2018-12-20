@@ -1,3 +1,5 @@
+.PHONY: example help
+
 example: ## rebuild the example from scratch
 	rm -rf example
 	cookiecutter https://github.com/gofunct/cookiecutter-grpcgo.git
