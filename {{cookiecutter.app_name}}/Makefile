@@ -1,24 +1,23 @@
-.PHONY: build build-alpine clean test help default vendor setup regen
+.PHONY: build build-alpine clean test help default vendor setup prototool deps
 
-service_name =	$(word 2,$(subst /, ,$1))
-BIN_NAME={{cookiecutter.app_name}}
-
+SOURCES :=	$(shell find . -name "*.proto" -not -path ./vendor/\*)
+TARGETS_TMPL :=	$(foreach source, $(SOURCES), $(source)_tmpl)
 VERSION := $(shell grep "const Version " version/version.go | sed -E 's/.*"(.+)"$$/\1/')
 GIT_COMMIT=$(shell git rev-parse HEAD)
 GIT_DIRTY=$(shell test -n "`git status --porcelain`" && echo "+CHANGES" || true)
 BUILD_DATE=$(shell date '+%Y-%m-%d-%H:%M:%S')
 IMAGE_NAME := "{{cookiecutter.docker_hub_username}}/{{cookiecutter.app_name}}"
-SOURCES :=	$(shell find . -name "*.proto" -not -path ./vendor/\*)
-TARGETS_GO :=	$(foreach source, $(SOURCES), $(source)_go)
-TARGETS_TMPL :=	$(foreach source, $(SOURCES), $(source)_tmpl)
 PROJECT_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}"
 SERVICE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"
 
+service_name =	$(word 2,$(subst /, ,$1))BIN_NAME={{cookiecutter.app_name}}
+
 default: test
 
-setup: ## download dependencies and tls certificates
+setup: deps prototool $(TARGETS_TMPL)
+
+deps: ## download dependencies and tls certificates
 	go mod vendor
-	git clone -q https://github.com/gofunct/templates.git
 	brew install protobuf
 	brew install prototool
 	go get -u \
@@ -29,19 +28,18 @@ setup: ## download dependencies and tls certificates
 		moul.io/protoc-gen-gotemplate \
 		github.com/gogo/protobuf/...
 
+prototool:
+	prototool all services
+
+$(TARGETS_TMPL): %_tmpl:
+	git clone -q https://github.com/gofunct/templates.git
+	protoc -I. --gotemplate_out=destination_dir=gen/$(call service_name,$*),template_dir=templates:services "$*"
+	rm -rf templates
+
 build: setup vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
 	@echo "building ${BIN_NAME} ${VERSION}"
 	@echo "GOPATH=${GOPATH}"
 	go build -ldflags "-X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
-
-gen:
-	prototool all services
-
-regen: ## delete all files and regenerate project
-	rm -rf *
-	rm .*
-	cookiecutter https://github.com/gofunct/cookiecutter-grpcgo.git
-
 
 vendor: ## Runs go mod vendor, mostly used for ci.
 	go mod vendor
