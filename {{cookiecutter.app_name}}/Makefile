@@ -22,6 +22,7 @@ setup: ## download dependencies and tls certificates
 	brew install protobuf
 	brew install prototool
 	go get -u \
+		github.com/gofunct/templates \
 		google.golang.org/grpc \
 		github.com/golang/protobuf/protoc-gen-go \
 		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway \
