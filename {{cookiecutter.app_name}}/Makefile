@@ -40,7 +40,7 @@ $(TARGETS_GO): %_go:
 	protoc --go_out=plugins=grpc:. "$*"
 
 $(TARGETS_TMPL): %_tmpl:
-	protoc -I. --gotemplate_out=destination_dir=services/$(call service_name,$*),template_dir=templates:services "$*"
+	protoc -I. --gotemplate_out=destination_dir=services/$(call service_name,$*),template_dir=templates/{{.File.Package}}:services "$*"
 
 regen: ## delete all files and regenerate project
 	rm -rf *
