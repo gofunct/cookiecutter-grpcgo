@@ -1,9 +1,6 @@
 protoc:
   version: 3.6.1
 
-protoc_include_wkt: true
-allow_unused_imports: true
-
 generate:
   go_options:
     import_path: github.com/gofunct/example

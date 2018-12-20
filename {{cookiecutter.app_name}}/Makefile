@@ -18,14 +18,15 @@ default: test
 
 setup: ## download dependencies and tls certificates
 	go mod vendor
+	git clone -q https://github.com/gofunct/templates.git
 	brew install protobuf
 	brew install prototool
-	git clone -q https://github.com/gofunct/templates.git
 	go get -u \
 		google.golang.org/grpc \
 		github.com/golang/protobuf/protoc-gen-go \
-		github.com/gogo/protobuf/protoc-gen-gogo \
-		github.com/gogo/protobuf/protoc-gen-gogofast \
+		go get github.com/gogo/protobuf/proto \
+        go get github.com/gogo/protobuf/{binary} \
+        go get github.com/gogo/protobuf/gogoproto \
 		github.com/ckaznocha/protoc-gen-lint \
 		github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc \
 		moul.io/protoc-gen-gotemplate
