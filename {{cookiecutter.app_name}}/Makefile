@@ -15,7 +15,6 @@ PROJECT_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_
 SERVICE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"
 TEMPLATE_PATH := "github.com/gofunct/templates"
 
-
 default: test
 
 setup: ## download dependencies and tls certificates
@@ -46,7 +45,7 @@ $(TARGETS_GO): %_go:
 
 $(TARGETS_TMPL): %_tmpl:
 	@mkdir -p $(dir $*)gen
-	protoc -I. --gotemplate_out=destination_dir=services/$(call service_name,$*)/gen,template_dir=templates:services "$*"
+	protoc -I. --gotemplate_out=destination_dir=services/$(call service_name,$*)/gen,template_dir=$(TEMPLATE_PATH):services "$*"
 	@rm -rf services/services  # need to investigate why this directory is created
 	gofmt -w $(dir $*)gen
 
