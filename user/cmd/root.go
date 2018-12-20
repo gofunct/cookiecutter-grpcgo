@@ -41,8 +41,8 @@ func GetKitLogger() kitlog.Logger {
 
 func Init() {
         {
-                logger := kitlog.NewJSONLogger(kitlog.NewSyncWriter(os.Stdout))
-                log.SetOutput(kitlog.NewStdlibAdapter(logger))
+                kitLog = kitlog.NewJSONLogger(kitlog.NewSyncWriter(os.Stdout))
+                log.SetOutput(kitlog.NewStdlibAdapter(kitLog))
                 log.Println("new json logger registered")
         }
         {
