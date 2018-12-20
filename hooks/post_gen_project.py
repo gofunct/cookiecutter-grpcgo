@@ -40,7 +40,5 @@ else:
     remove_dir(".circleci")
 
 # 7. Remove files depending on selection of mod or dep
-if '{{ cookiecutter.go_mod_or_dep}}'.lower() == 'mod':
-    remove_file("Gopkg.toml")
-else:
+if '{{ cookiecutter.use_go_mod}}'.lower() != 'y':
     remove_file("go.mod")
