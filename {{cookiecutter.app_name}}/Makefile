@@ -13,10 +13,26 @@ TARGETS_GO :=	$(foreach source, $(SOURCES), $(source)_go)
 TARGETS_TMPL :=	$(foreach source, $(SOURCES), $(source)_tmpl)
 PROJECT_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}"
 SERVICE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"
-TEMPLATE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/templates"
+TEMPLATE_PATH := "github.com/gofunct/templates"
 
 
 default: test
+
+setup: ## download dependencies and tls certificates
+	go mod vendor
+	brew install protobuf
+	brew install prototool
+	go get -u \
+		google.golang.org/grpc \
+		github.com/golang/protobuf/protoc-gen-go \
+		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway \
+		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger \
+		github.com/gogo/protobuf/protoc-gen-gogo \
+		github.com/gogo/protobuf/protoc-gen-gogofast \
+		github.com/ckaznocha/protoc-gen-lint \
+		github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc \
+		github.com/golang/protobuf/{proto,protoc-gen-go} \
+		moul.io/protoc-gen-gotemplate
 
 build: vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
 	@echo "building ${BIN_NAME} ${VERSION}"
@@ -39,21 +55,6 @@ regen: ## delete all files and regenerate project
 	rm .*
 	cookiecutter https://github.com/gofunct/cookiecutter-grpcgo.git
 
-setup: ## download dependencies and tls certificates
-	go mod vendor
-	brew install protobuf
-	brew install prototool
-	go get -u \
-		google.golang.org/grpc \
-		github.com/golang/protobuf/protoc-gen-go \
-		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway \
-		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger \
-		github.com/gogo/protobuf/protoc-gen-gogo \
-		github.com/gogo/protobuf/protoc-gen-gogofast \
-		github.com/ckaznocha/protoc-gen-lint \
-		github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc \
-		github.com/golang/protobuf/{proto,protoc-gen-go} \
-		moul.io/protoc-gen-gotemplate
 
 vendor: ## Runs go mod vendor, mostly used for ci.
 	go mod vendor
@@ -83,9 +84,11 @@ push: tag ## Push tagged images to registry'
 clean: ## Clean the directory tree.
 	@test ! -e bin/${BIN_NAME} || rm bin/${BIN_NAME}
 
+{% if cookiecutter.use_tls == "y" %}
 certs: ## Generate a server key and certificate
 	openssl genrsa -out certs/server.key 2048
 	openssl req -new -x509 -key server.key -out certs/server.pem -days 3650
+{% endif %}
 
 test: ## Run tests on a compiled project.
 	go test ./...
