@@ -22,6 +22,7 @@ ARG VERSION
 LABEL REPO="https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}"
 LABEL GIT_COMMIT=$GIT_COMMIT
 LABEL VERSION=$VERSION
+EXPOSE  {{cookiecutter.grpc_port}} {{cookiecutter.http_port}}
 
 # Because of https://github.com/docker/docker/issues/14914
 ENV PATH=$PATH:/opt/{{cookiecutter.app_name}}/bin

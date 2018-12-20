@@ -1,17 +1,19 @@
 {
     "full_name": "Coleman Word",
     "github_username": "gofunct",
-    "app_name": "mygrpcProject",
-    "project_short_description": "A Golang project.",
-    "docker_hub_username": "colemanword",
+    "app_name": "example",
+    "project_short_description": "example description",
+    "docker_hub_username": "gofunct",
     "docker_image": "alpine",
-    "docker_build_image": "colemanword/build-image",
+    "docker_build_image": "gofunct/cookiecutter-grpcgo",
     "docker_build_image_version": ["1.11", "1.10.3", "1.9.7"],
-    "go_mod_or_dep": ["dep", "mod"],
+    "use_go_mod": "y",
     "use_docker": "y",
     "use_git": "y",
-    "use_logrus_logging": "y",
-    "use_viper_config": "y",
-    "use_cobra_cmd": "y",
-    "use_ci": ["travis", "circle", "none"]
+    "viper_config_name": "config",
+    "grpc_port": 9090,
+    "http_port": 8080,
+    "log_level": "debug",
+    "json_logs": "true",
+    "use_circle_ci": "y"
 }

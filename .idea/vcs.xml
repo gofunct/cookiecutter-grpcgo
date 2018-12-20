@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/{{cookiecutter.app_name}}/temp/grpc12f" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates" vcs="Git" />
   </component>
 </project>

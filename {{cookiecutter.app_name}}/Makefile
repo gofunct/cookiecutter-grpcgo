@@ -1,5 +1,6 @@
-.PHONY: build build-alpine clean test help default
+.PHONY: build build-alpine clean test help default vendor setup regen
 
+service_name =	$(word 2,$(subst /, ,$1))
 BIN_NAME={{cookiecutter.app_name}}
 
 VERSION := $(shell grep "const Version " version/version.go | sed -E 's/.*"(.+)"$$/\1/')
@@ -7,16 +8,39 @@ GIT_COMMIT=$(shell git rev-parse HEAD)
 GIT_DIRTY=$(shell test -n "`git status --porcelain`" && echo "+CHANGES" || true)
 BUILD_DATE=$(shell date '+%Y-%m-%d-%H:%M:%S')
 IMAGE_NAME := "{{cookiecutter.docker_hub_username}}/{{cookiecutter.app_name}}"
+SOURCES :=	$(shell find . -name "*.proto" -not -path ./vendor/\*)
+TARGETS_GO :=	$(foreach source, $(SOURCES), $(source)_go)
+TARGETS_TMPL :=	$(foreach source, $(SOURCES), $(source)_tmpl)
+PROJECT_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}"
+SERVICE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"
+TEMPLATE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/templates"
+
 
 default: test
 
-regen:
+build: $(TARGETS_GO) $(TARGETS_TMPL) ## Compile the project.
+	@echo "building ${BIN_NAME} ${VERSION}"
+	@echo "GOPATH=${GOPATH}"
+	go build -ldflags "-X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
+
+$(TARGETS_GO): %_go:
+	protoc --go_out=plugins=grpc:. "$*"
+	@mkdir -p services/$(call service_name,$*)/gen/pb
+	@mv ./services/$(call service_name,$*)/$(call service_name,$*).pb.go ./services/$(call service_name,$*)/gen/pb/pb.go
+
+$(TARGETS_TMPL): %_tmpl:
+	@mkdir -p $(dir $*)gen
+	protoc -I. --gotemplate_out=destination_dir=services/$(call service_name,$*)/gen,template_dir=templates:services "$*"
+	@rm -rf services/services  # need to investigate why this directory is created
+	gofmt -w $(dir $*)gen
+
+regen: ## delete all files and regenerate project
 	rm -rf *
 	rm .*
 	cookiecutter https://github.com/gofunct/cookiecutter-grpcgo.git
 
-.PHONY: setup
 setup: ## download dependencies and tls certificates
+	go mod vendor
 	brew install protobuf
 	brew install prototool
 	go get -u \
@@ -31,13 +55,9 @@ setup: ## download dependencies and tls certificates
 		github.com/golang/protobuf/{proto,protoc-gen-go} \
 		moul.io/protoc-gen-gotemplate
 
-build: ## Compile the project.
-	@echo "building ${BIN_NAME} ${VERSION}"
-	@echo "GOPATH=${GOPATH}"
-	go build -ldflags "-X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
+vendor: ## Runs go mod vendor, mostly used for ci.
+	go mod vendor
 
-get-deps: ## Runs dep ensure, mostly used for ci.
-	dep ensure
 {% if cookiecutter.use_docker == "y" %}
 build-alpine: ## Compile optimized for alpine linux.
 	@echo "building ${BIN_NAME} ${VERSION}"
@@ -63,9 +83,12 @@ push: tag ## Push tagged images to registry'
 clean: ## Clean the directory tree.
 	@test ! -e bin/${BIN_NAME} || rm bin/${BIN_NAME}
 
+certs: ## Generate a server key and certificate
+    openssl genrsa -out certs/server.key 2048
+    openssl req -new -x509 -key server.key -out certs/server.pem -days 3650
+
 test: ## Run tests on a compiled project.
 	go test ./...
 
 help: ## help
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST) | sort
-

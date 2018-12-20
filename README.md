@@ -1,46 +1,57 @@
-# Spawnd
+# cookiecutter-grpcgo
 
-## Roadmap
-### Transport Generation
-- [ ] gRPC server
-- [ ] http Server
-- [ ] http-grpc proxy server
+Powered by [Cookiecutter](https://github.com/audreyr/cookiecutter), Cookiecutter Golang is a framework for jumpstarting production-ready go projects quickly.
 
-### Debug Generation
-- [ ] prometheus metrics and handler
-- [ ] jaeger tracing
-- [ ] pprof handler
-- [ ] readiness handler
-- [ ] liveness handler
-- [ ] prometheus
+## Features
 
-### Project Generation
-- [ ] makefile
-- [ ] cobra cli
-- [ ] config file
-- [ ] .gitignore
-
-### Deployment
-- [ ] prometheus dockerfile
-- [ ] jaeger dockerfile
-- [ ] endpoints dockerfiles
+- [x] Makefile
+- [x] Dockerfile
+- [ ] Docker-compose (prometheus, jaeger)
+- [x] build time and git hash at build time
+- [x] .gitignore
+- [x] README.md
+- [ ] Prototool config
+- [x] Cobra cli
+- [x] Viper config
+- [ ] Starter proto file
+- [ ] Gokit http server
+- [ ] Gokit grpc server
+- [ ] Grpc gateway
+- [ ] UI
+- [ ] Kubernetes Deployment
 
 ## Usage
 
-```text
-Usage:
-  spawnd [command]
+First, get Cookiecutter. Trust me, it's awesome:
+```console
+$ pip install cookiecutter
+```
 
-Available Commands:
-  cobra       generate a cobra client command
-  convert     A brief description of your command
-  help        Help about any command
-  init        Initialize a GrpcGen Application
-  protoc      n/a
-  proxy       A brief description of your command
-  server      Create a new command to start a grpc and http based application
+Alternatively, you can install `cookiecutter` with homebrew:
+```console
+$ brew install cookiecutter
+```
 
-Flags:
-  -h, --help             help for spawnd
-      --service string   The protobuf message used for this configuration
+Finally, to run it based on this template, type:
+```console
+$ cookiecutter https://github.com/lacion/cookiecutter-golang.git
+```
 
+You will be asked about your basic info (name, project name, app name, etc.). This info will be used to customize your new project.
+
+Warning: After this point, change all default options to your own information.
+
+Answer the prompts with your own desired [options]().
+
+Enter the project and take a look around:
+```console
+$ cd echoserver/
+$ ls
+```
+
+Run `make help` to see the available management commands, or just run `make build` to build your project.
+```console
+$ make help
+$ make build
+$ ./bin/echoserver
+```

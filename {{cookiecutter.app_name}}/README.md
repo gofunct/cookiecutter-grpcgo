@@ -1,4 +1,5 @@
 # {{cookiecutter.app_name}}
+author: {{cookiecutter.full_name}}
 
 {{cookiecutter.project_short_description}}
 
