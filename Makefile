@@ -2,7 +2,7 @@
 
 example: ## rebuild the example from scratch
 	rm -rf example
-	cookiecutter https://github.com/gofunct/cookiecutter-grpcgo.git
+	cookiecutter --no-input https://github.com/gofunct/cookiecutter-grpcgo.git
 	cd example; make build
 
 help: ## help
