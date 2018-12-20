@@ -13,7 +13,7 @@ TARGETS_GO :=	$(foreach source, $(SOURCES), $(source)_go)
 TARGETS_TMPL :=	$(foreach source, $(SOURCES), $(source)_tmpl)
 PROJECT_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}"
 SERVICE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"
-TEMPLATE_PATH := "github.com/gofunct/templates"
+TEMPLATE_PATH := "vendor/github.com/gofunct/templates/{{.File.Package}}"
 
 default: test
 
@@ -41,14 +41,9 @@ build: vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
 
 $(TARGETS_GO): %_go:
 	protoc --go_out=plugins=grpc:. "$*"
-	@mkdir -p services/$(call service_name,$*)/gen/pb
-	@mv ./services/$(call service_name,$*)/$(call service_name,$*).pb.go ./services/$(call service_name,$*)/gen/pb/pb.go
 
 $(TARGETS_TMPL): %_tmpl:
-	@mkdir -p $(dir $*)gen
-	protoc -I. --gotemplate_out=destination_dir=services/$(call service_name,$*)/gen,template_dir=$(TEMPLATE_PATH):services "$*"
-	@rm -rf services/services  # need to investigate why this directory is created
-	gofmt -w $(dir $*)gen
+	protoc -I. --gotemplate_out=destination_dir=services/$(call service_name,$*),template_dir=vendor/github.com/gofunct/templates/{{.File.Package}}:services "$*"
 
 regen: ## delete all files and regenerate project
 	rm -rf *
