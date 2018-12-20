@@ -34,7 +34,7 @@ $ brew install cookiecutter
 
 Finally, to run it based on this template, type:
 ```console
-$ cookiecutter https://github.com/lacion/cookiecutter-golang.git
+$ cookiecutter https://github.com/gofunct/cookiecutter-grpcgo
 ```
 
 You will be asked about your basic info (name, project name, app name, etc.). This info will be used to customize your new project.
