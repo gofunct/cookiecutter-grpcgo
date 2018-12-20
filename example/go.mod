@@ -13,7 +13,7 @@ require (
 	github.com/go-logfmt/logfmt v0.4.0 // indirect
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/gofunct/templates v0.0.0-20181220201910-fd76c260d65d // indirect
-	github.com/gogo/protobuf v1.2.0 // indirect
+	github.com/gogo/protobuf v1.2.0
 	github.com/golang/mock v1.2.0 // indirect
 	github.com/google/uuid v1.1.0 // indirect
 	github.com/gorilla/context v1.1.1 // indirect
@@ -31,7 +31,7 @@ require (
 	github.com/spf13/viper v1.2.0
 	golang.org/x/crypto v0.0.0-20181203042331-505ab145d0a9 // indirect
 	golang.org/x/lint v0.0.0-20181217174547-8f45f776aaf1 // indirect
-	golang.org/x/net v0.0.0-20181220203305-927f97764cc3 // indirect
+	golang.org/x/net v0.0.0-20181220203305-927f97764cc3
 	golang.org/x/oauth2 v0.0.0-20181203162652-d668ce993890 // indirect
 	golang.org/x/sync v0.0.0-20181108010431-42b317875d0f // indirect
 	golang.org/x/sys v0.0.0-20181220204120-b00e65af1da0 // indirect

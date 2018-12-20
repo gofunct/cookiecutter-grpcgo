@@ -9,5 +9,3 @@ generate:
     type: gogo
     flags: plugins=grpc
     output: ../gen
-  - name: gotemplate
-    output: ../gen

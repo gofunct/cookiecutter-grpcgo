@@ -9,7 +9,7 @@ BUILD_DATE=$(shell date '+%Y-%m-%d-%H:%M:%S')
 IMAGE_NAME := "{{cookiecutter.docker_hub_username}}/{{cookiecutter.app_name}}"
 PROJECT_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}"
 SERVICE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"
-
+BIN_NAME={{cookiecutter.app_name}}
 service_name =	$(word 2,$(subst /, ,$1))BIN_NAME={{cookiecutter.app_name}}
 
 default: test

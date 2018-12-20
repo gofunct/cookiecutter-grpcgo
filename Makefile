@@ -1,8 +1,8 @@
-.PHONY: example help
+.PHONY: user help
 
-example: ## rebuild the example from scratch
+user: ## rebuild the example from scratch
 	rm -rf user
-	cookiecutter --no-input https://github.com/gofunct/cookiecutter-grpcgo.git
+	cookiecutter https://github.com/gofunct/cookiecutter-grpcgo.git
 	cd example; make setup
 
 help: ## help
