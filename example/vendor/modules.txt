@@ -1,4 +1,4 @@
-# github.com/dgrijalva/jwt-go v0.0.0-20160621201154-c9eaceb2896d
+# github.com/dgrijalva/jwt-go v3.2.0+incompatible
 github.com/dgrijalva/jwt-go
 # github.com/fsnotify/fsnotify v1.4.7
 github.com/fsnotify/fsnotify
@@ -8,7 +8,7 @@ github.com/go-kit/kit/auth/jwt
 github.com/go-kit/kit/endpoint
 github.com/go-kit/kit/transport/grpc
 github.com/go-kit/kit/transport/http
-# github.com/go-logfmt/logfmt v0.3.0
+# github.com/go-logfmt/logfmt v0.4.0
 github.com/go-logfmt/logfmt
 # github.com/golang/protobuf v1.2.0
 github.com/golang/protobuf/proto
@@ -52,7 +52,7 @@ github.com/spf13/jwalterweatherman
 github.com/spf13/pflag
 # github.com/spf13/viper v1.2.0
 github.com/spf13/viper
-# golang.org/x/net v0.0.0-20181106065722-10aee1819953
+# golang.org/x/net v0.0.0-20181217023233-e147a9138326
 golang.org/x/net/context
 golang.org/x/net/trace
 golang.org/x/net/internal/timeseries
@@ -60,14 +60,14 @@ golang.org/x/net/http2
 golang.org/x/net/http2/hpack
 golang.org/x/net/http/httpguts
 golang.org/x/net/idna
-# golang.org/x/sys v0.0.0-20180906133057-8cf3aee42992
+# golang.org/x/sys v0.0.0-20181220182059-7c4c994c65f7
 golang.org/x/sys/unix
 # golang.org/x/text v0.3.0
 golang.org/x/text/transform
 golang.org/x/text/unicode/norm
 golang.org/x/text/secure/bidirule
 golang.org/x/text/unicode/bidi
-# google.golang.org/genproto v0.0.0-20181217233458-174793a81d5f
+# google.golang.org/genproto v0.0.0-20181219182458-5a97ab628bfb
 google.golang.org/genproto/googleapis/rpc/status
 # google.golang.org/grpc v1.17.0
 google.golang.org/grpc

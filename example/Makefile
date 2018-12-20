@@ -34,7 +34,7 @@ setup: ## download dependencies and tls certificates
 		github.com/golang/protobuf/{proto,protoc-gen-go} \
 		moul.io/protoc-gen-gotemplate
 
-build: vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
+build: setup vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
 	@echo "building ${BIN_NAME} ${VERSION}"
 	@echo "GOPATH=${GOPATH}"
 	go build -ldflags "-X github.com/gofunct/example/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/gofunct/example/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
