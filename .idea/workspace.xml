@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7087faca-059b-4773-b2ee-4cb389a586fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/example/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/example/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/example/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/example/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/session/session.proto" beforeDir="false" afterPath="$PROJECT_DIR$/example/services/session/session.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/sprint/sprint.proto" beforeDir="false" afterPath="$PROJECT_DIR$/example/services/sprint/sprint.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/example/services/user/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/gen/session/session.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/gen/sprint/client/grpc/client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/gen/sprint/endpoints/endpoints.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/gen/sprint/helpers/helpers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/gen/sprint/sprint.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/gen/sprint/transports/grpc/grpc.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/gen/sprint/transports/http/http.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/gen/user/helpers/helpers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/example/gen/user/helpers/helpers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/services/session/service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/services/session/session.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/services/sprint/service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/services/sprint/sprint.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,12 +41,12 @@
           <entry key="LICENSE" value="1" />
           <entry key="Makefile" value="11" />
           <entry key="gitignore" value="5" />
-          <entry key="go" value="29" />
+          <entry key="go" value="30" />
           <entry key="ini" value="1" />
           <entry key="json" value="4" />
           <entry key="md" value="8" />
           <entry key="mod" value="3" />
-          <entry key="proto" value="4" />
+          <entry key="proto" value="5" />
           <entry key="py" value="1" />
           <entry key="sh" value="1" />
           <entry key="sum" value="2" />
@@ -55,12 +63,12 @@
           <entry key="DTD" value="3" />
           <entry key="Dockerfile" value="4" />
           <entry key="Git file" value="1" />
-          <entry key="Go" value="23" />
+          <entry key="Go" value="24" />
           <entry key="JSON" value="4" />
           <entry key="Makefile" value="11" />
           <entry key="Markdown" value="8" />
           <entry key="PLAIN_TEXT" value="39" />
-          <entry key="PROTO" value="4" />
+          <entry key="PROTO" value="5" />
           <entry key="YAML" value="5" />
         </counts>
       </usages-collector>
@@ -74,7 +82,7 @@
           <entry key="json" value="469" />
           <entry key="md" value="335" />
           <entry key="mod" value="27" />
-          <entry key="proto" value="33" />
+          <entry key="proto" value="35" />
           <entry key="py" value="268" />
           <entry key="tmpl" value="44" />
           <entry key="yaml" value="106" />
@@ -89,7 +97,7 @@
           <entry key="Makefile" value="685" />
           <entry key="Markdown" value="335" />
           <entry key="PLAIN_TEXT" value="95" />
-          <entry key="PROTO" value="33" />
+          <entry key="PROTO" value="35" />
           <entry key="Python" value="268" />
           <entry key="YAML" value="106" />
         </counts>
@@ -108,14 +116,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/gen/session/session.pb.go">
+        <entry file="file://$PROJECT_DIR$/example/gen/user/helpers/helpers.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-375" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example/gen/user/user.pb.go">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/example/gen/user/helpers/helpers.txt">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-375" />
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -173,15 +190,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -217,7 +225,6 @@
       <list>
         <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/service.go" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/log/log.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/config/config.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/proxy.go" />
@@ -250,6 +257,7 @@
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" />
       </list>
     </option>
   </component>
@@ -259,7 +267,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="947" />
@@ -300,53 +308,20 @@
             <path>
               <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
               <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="gen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="gen" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="gen" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="gen" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="grpc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="gen" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="endpoints" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="gen" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
               <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
               <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
+              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -396,7 +371,7 @@
     </option>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="947" extended-state="1" />
+    <frame x="0" y="23" width="1680" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26190478" />
@@ -434,15 +409,6 @@
     <proxy>direct</proxy>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/CONTRIBUTING.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/.travis.yaml" />
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/certs/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -627,6 +593,16 @@
     <entry file="file://$PROJECT_DIR$/example/gen/user/helpers/helpers.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-375" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/gen/user/user.pb.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
       </provider>
     </entry>
   </component>
