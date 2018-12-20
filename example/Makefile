@@ -24,9 +24,7 @@ setup: ## download dependencies and tls certificates
 	go get -u \
 		google.golang.org/grpc \
 		github.com/golang/protobuf/protoc-gen-go \
-		go get github.com/gogo/protobuf/proto \
-        go get github.com/gogo/protobuf/{binary} \
-        go get github.com/gogo/protobuf/gogoproto \
+		go get github.com/gogo/protobuf/... \
 		github.com/ckaznocha/protoc-gen-lint \
 		github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc \
 		moul.io/protoc-gen-gotemplate
