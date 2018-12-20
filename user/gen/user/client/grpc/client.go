@@ -9,8 +9,8 @@ import (
         "github.com/go-kit/kit/endpoint"
         jwt "github.com/go-kit/kit/auth/jwt"
 
-        pb "github.com/gofunct/cookiecutter-grpcgo/user/gen/user/pb"
-        endpoints "github.com/gofunct/cookiecutter-grpcgo/user/gen/user/endpoints"
+        pb "github.com/gofunct/user/gen/user"
+        endpoints "github.com/gofunct/user/gen/user/endpoints"
 )
 
 
@@ -27,7 +27,7 @@ func New(conn *grpc.ClientConn, logger log.Logger) pb.UserServiceServer {
 					EncodeCreateUserRequest,
 					DecodeCreateUserResponse,
 					pb.CreateUserResponse{},
-					append([]grpctransport.ClientOption{}, grpctransport.ClientBefore(jwt.FromGRPCContext()))...,
+					append([]grpctransport.ClientOption{}, grpctransport.ClientBefore(jwt.ContextToGRPC()))...,
 				).Endpoint()
 			}
 		
@@ -42,7 +42,7 @@ func New(conn *grpc.ClientConn, logger log.Logger) pb.UserServiceServer {
 					EncodeGetUserRequest,
 					DecodeGetUserResponse,
 					pb.GetUserResponse{},
-					append([]grpctransport.ClientOption{}, grpctransport.ClientBefore(jwt.FromGRPCContext()))...,
+					append([]grpctransport.ClientOption{}, grpctransport.ClientBefore(jwt.ContextToGRPC()))...,
 				).Endpoint()
 			}
 		

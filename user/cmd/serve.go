@@ -21,6 +21,9 @@ import (
 	user_httptransport "github.com/gofunct/user/gen/user/transports/http"
 )
 
+func init() {
+	rootCmd.AddCommand(serveCmd)
+}
 
 var serveCmd = &cobra.Command{
 	Use: "serve",

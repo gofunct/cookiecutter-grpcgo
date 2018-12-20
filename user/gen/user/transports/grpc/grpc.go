@@ -6,11 +6,11 @@ import (
 	context "context"
         "fmt"
 
-        oldcontext "golang.org/x/net/context"
+    oldcontext "golang.org/x/net/context"
 	grpctransport "github.com/go-kit/kit/transport/grpc"
 
-        pb "github.com/gofunct/cookiecutter-grpcgo/user/gen/user/pb"
-        endpoints "github.com/gofunct/cookiecutter-grpcgo/user/gen/user/endpoints"
+    pb "github.com/gofunct/user/gen/user"
+    endpoints "github.com/gofunct/user/gen/user/endpoints"
 )
 
 // avoid import errors
