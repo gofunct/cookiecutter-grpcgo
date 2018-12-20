@@ -1,20 +1,19 @@
 package cmd
 
 import (
-        "flag"
         "fmt"
-        "github.com/go-kit/kit/log"
-        "github.com/spf13/pflag"
-        "github.com/spf13/viper"
-        "os"
+        kitlog "github.com/go-kit/kit/log"
         "github.com/spf13/cobra"
+        "github.com/spf13/viper"
+        "log"
+        "os"
 )
 
 func init() {Init()}
 
 var (
         defaultConfig *viper.Viper
-        logger  *log.Logger
+        kitLog  kitlog.Logger
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -36,15 +35,15 @@ func GetConfig() *viper.Viper {
         return defaultConfig
 }
 
-func GetLogger() *log.Logger {
-        return logger
+func GetKitLogger() kitlog.Logger {
+        return kitLog
 }
 
 func Init() {
         {
-                logger = log.NewLogfmtLogger(os.Stdout)
-                logger = log.With(logger, "ts", log.DefaultTimestampUTC)
-                logger = log.With(logger, "caller", log.DefaultCaller)
+                logger := kitlog.NewJSONLogger(kitlog.NewSyncWriter(os.Stdout))
+                log.SetOutput(kitlog.NewStdlibAdapter(logger))
+                log.Println("new json logger registered")
         }
         {
                 defaultConfig = viper.New()
@@ -68,16 +67,16 @@ func Init() {
 
         // If a config file is found, read it in.
         if err := defaultConfig.ReadInConfig(); err != nil {
-                logger.Info("failed to read config file, writing defaults...")
+               log.Println("failed to read config file, writing defaults...")
                 if err := defaultConfig.WriteConfigAs("cookiecutter.viper_config_name"+".yaml"); err != nil {
-                        logger.Fatal("failed to write config")
+                        log.Fatal("failed to write config")
                         os.Exit(1)
                 }
 
         } else {
-                logger.Info("Using config file-->", defaultConfig.ConfigFileUsed())
+                log.Print("Using config file-->", defaultConfig.ConfigFileUsed())
                 if err := defaultConfig.WriteConfig(); err != nil {
-                        logger.Fatal("failed to write config file")
+                        log.Fatal("failed to write config file")
                         os.Exit(1)
                 }
         }

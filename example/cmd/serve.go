@@ -13,20 +13,7 @@ import (
 	"github.com/go-kit/kit/log"
 	"github.com/gorilla/handlers"
 	"google.golang.org/grpc"
-
-	session_svc "github.com/gofunct/example/services"
-	session_endpoints "github.com/gofunct/example/services/session/gen/endpoints"
-	session_pb "github.com/gofunct/example/services/session/gen/pb"
-	session_grpctransport "github.com/gofunct/example/services/session/gen/transports/grpc"
-	session_httptransport "github.com/gofunct/example/services/session/gen/transports/http"
-
-	sprint_svc "github.com/gofunct/example/services/sprint"
-	sprint_endpoints "github.com/gofunct/example/services/sprint/gen/endpoints"
-	sprint_pb "github.com/gofunct/example/services/sprint/gen/pb"
-	sprint_grpctransport "github.com/gofunct/example/services/sprint/gen/transports/grpc"
-	sprint_httptransport "github.com/gofunct/example/services/sprint/gen/transports/http"
-
-	user_svc "github.com/gofunct/example/services/user"
+	user_svc "github.com/gofunct/example/gen/user"
 	user_endpoints "github.com/gofunct/example/services/user/gen/endpoints"
 	user_pb "github.com/gofunct/example/services/user/gen/pb"
 	user_grpctransport "github.com/gofunct/example/services/user/gen/transports/grpc"
