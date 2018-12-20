@@ -20,9 +20,8 @@ default: test
 setup: ## download dependencies and tls certificates
 	go mod vendor
 	brew install protobuf
-	brew install prototool
+	git clone -q https://github.com/gofunct/templates.git
 	go get -u \
-		github.com/gofunct/templates \
 		google.golang.org/grpc \
 		github.com/golang/protobuf/protoc-gen-go \
 		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway \
@@ -31,7 +30,6 @@ setup: ## download dependencies and tls certificates
 		github.com/gogo/protobuf/protoc-gen-gogofast \
 		github.com/ckaznocha/protoc-gen-lint \
 		github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc \
-		github.com/golang/protobuf/{proto,protoc-gen-go} \
 		moul.io/protoc-gen-gotemplate
 
 build: setup vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.

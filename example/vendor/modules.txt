@@ -52,7 +52,7 @@ github.com/spf13/jwalterweatherman
 github.com/spf13/pflag
 # github.com/spf13/viper v1.2.0
 github.com/spf13/viper
-# golang.org/x/net v0.0.0-20181217023233-e147a9138326
+# golang.org/x/net v0.0.0-20181220203305-927f97764cc3
 golang.org/x/net/context
 golang.org/x/net/trace
 golang.org/x/net/internal/timeseries

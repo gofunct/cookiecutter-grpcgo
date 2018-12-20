@@ -33,7 +33,7 @@ require (
 	github.com/spf13/viper v1.2.0
 	golang.org/x/crypto v0.0.0-20181203042331-505ab145d0a9 // indirect
 	golang.org/x/lint v0.0.0-20181217174547-8f45f776aaf1 // indirect
-	golang.org/x/net v0.0.0-20181217023233-e147a9138326
+	golang.org/x/net v0.0.0-20181220203305-927f97764cc3
 	golang.org/x/oauth2 v0.0.0-20181203162652-d668ce993890 // indirect
 	golang.org/x/sync v0.0.0-20181108010431-42b317875d0f // indirect
 	golang.org/x/sys v0.0.0-20181220182059-7c4c994c65f7 // indirect
@@ -43,12 +43,4 @@ require (
 	google.golang.org/grpc v1.17.0
 	honnef.co/go/tools v0.0.0-20180920025451-e3ad64cb4ed3 // indirect
 	moul.io/protoc-gen-gotemplate v1.6.0 // indirect
-		github.com/golang/protobuf/protoc-gen-go
-		github.com/gofunct/templates
-		google.golang.org/grpc
-		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
-		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
-		github.com/gogo/protobuf/protoc-gen-gogofast
-		github.com/gogo/protobuf/protoc-gen-gogo
-		github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc
 )
