@@ -7,30 +7,6 @@
       <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/doc.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/README.md.tmpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/client/grpc/client.go.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/client/grpc/client.go.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/endpoints/endpoints.go.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/endpoints/endpoints.go.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/gateway/Dockerfile.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/gateway/Dockerfile.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/gateway/config.yaml.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/gateway/config.yaml.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/gateway/doc.go" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/gateway/doc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/gateway/main.go.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/gateway/main.go.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/example.go" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/example.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/example.proto" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/example.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/gen/doc.gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/gen/doc.gen.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/gen/example.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/gen/example.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/templates/doc.gen.go.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/templates/doc.gen.go.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/helpers/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/helpers/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/helpers/example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/helpers/example.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/helpers/example.txt.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/helpers/example.txt.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/helpers/helpers.proto" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/helpers/helpers.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/k8s/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/k8s/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/k8s/gen/nginx/dpl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/k8s/gen/nginx/dpl.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/k8s/gen/nginx/svc.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/k8s/gen/nginx/svc.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/k8s/nginx.proto" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/k8s/nginx.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/k8s/templates/{{.File.Package}}/dpl.yaml.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/k8s/templates/{{.File.Package}}/dpl.yaml.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/k8s/templates/{{.File.Package}}/svc.yaml.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/k8s/templates/{{.File.Package}}/svc.yaml.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/transports/grpc/grpc.go.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/transports/grpc/grpc.go.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/transports/http/http.go.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/transports/http/http.go.tmpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +31,7 @@
           <entry key="LICENSE" value="1" />
           <entry key="Makefile" value="7" />
           <entry key="gitignore" value="4" />
-          <entry key="go" value="22" />
+          <entry key="go" value="25" />
           <entry key="ini" value="1" />
           <entry key="json" value="3" />
           <entry key="md" value="8" />
@@ -80,7 +56,7 @@
           <entry key="JSON" value="3" />
           <entry key="Makefile" value="7" />
           <entry key="Markdown" value="8" />
-          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="PLAIN_TEXT" value="23" />
           <entry key="PROTO" value="1" />
           <entry key="YAML" value="3" />
         </counts>
@@ -119,53 +95,69 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/client/grpc/client.go.tmpl">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/client/grpc/client.go.tmpl">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/endpoints/endpoints.go.tmpl">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/version/version.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/gateway/Dockerfile.tmpl">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/gateway/doc.go">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/gateway/config.yaml.tmpl">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/gateway/main.go.tmpl">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/gateway/Dockerfile.tmpl">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/gateway/config.yaml.tmpl">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/gen/doc.gen.go">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/gen/example.pb.go">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/Makefile">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/root.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/templates/doc.gen.go.tmpl">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/serve.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/gen/doc.gen.go">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/gen/example.pb.go">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/Makefile">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/templates/doc.gen.go.tmpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -193,7 +185,7 @@
   </component>
   <component name="GOROOT" path="/usr/local/opt/go/libexec" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -262,7 +254,13 @@
             <path>
               <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
               <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
+              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
+              <item name="cmd" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -283,11 +281,13 @@
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen" />
+      <recent name="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates" />
+      <recent name="$PROJECT_DIR$/{{cookiecutter.app_name}}" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/{{cookiecutter.app_name}}/certs" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/{{cookiecutter.app_name}}" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -304,6 +304,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -359,23 +360,9 @@
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/version/version.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runtime/config/viper.go" />
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/go.sum">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/serve.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="86" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="86" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/go.mod">
       <provider selected="true" editor-type-id="text-editor">
@@ -426,13 +413,6 @@
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/root.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -517,38 +497,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/client/grpc/client.go.tmpl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/example/certs/Makefile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/endpoints/endpoints.go.tmpl">
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/endpoints/endpoints.go.tmpl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/gateway/doc.go">
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/gateway/doc.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/gateway/main.go.tmpl">
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/gateway/main.go.tmpl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/gateway/Dockerfile.tmpl">
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/gateway/Dockerfile.tmpl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/gateway/config.yaml.tmpl">
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/gateway/config.yaml.tmpl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/gen/doc.gen.go">
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/gen/doc.gen.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/gen/example.pb.go">
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/gen/example.pb.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/Makefile">
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/Makefile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/go-generate/templates/doc.gen.go.tmpl">
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/go-generate/templates/doc.gen.go.tmpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/client/grpc/client.go.tmpl">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/version/version.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/root.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/serve.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="86" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
