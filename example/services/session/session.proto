@@ -3,7 +3,7 @@ syntax = "proto3";
 package session;
 
 service SessionService {
-  rpc Login(LoginRequest) returns (LoginResponse);
+  rpc Login(LoginRequest) returns (LoginResponse) {}
 }
 
 message LoginRequest {
