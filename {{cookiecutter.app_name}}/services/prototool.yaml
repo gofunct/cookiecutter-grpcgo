@@ -1,80 +1,16 @@
-# Paths to exclude when searching for Protobuf files.
-#excludes:
-#  - path/to/a
-#  - path/to/b/file.proto
-
-# Protoc directives.
 protoc:
-  # The Protobuf version to use from https://github.com/protocolbuffers/protobuf/releases.
-  # By default use 3.6.1.
-  # You probably want to set this to make your builds completely reproducible.
   version: 3.6.1
 
-  # Additional paths to include with -I to protoc.
-  # By default, the directory of the config file is included,
-  # or the current directory if there is no config file.
-  #includes:
-  #  - ../../vendor/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis
-
-
-  # If not set, compile will fail if there are unused imports.
-  # Setting this will ignore unused imports.
-  #allow_unused_imports: true
-
-# Create directives.
-#create:
-  # List of mappings from relative directory to base package.
-  # This affects how packages are generated with create.
-  #packages:
-    # This means that a file created "foo.proto" in the current directory will have package "bar".
-    # A file created "a/b/foo.proto" will have package "bar.a.b".
-    #- directory: .
-    #  name: bar
-    # This means that a file created "idl/code.uber/a/b/c.proto" will have package "uber.a.b".
-    #- directory: idl/code.uber
-    #  name: uber
-
-# Lint directives.
-#lint:
-  # Linter files to ignore.
-#  ignores:
-#    - id: RPC_NAMES_CAMEL_CASE
-#      files:
-#        - path/to/foo.proto
-#        - path/to/bar.proto
-#    - id: SYNTAX_PROTO3
-#      files:
-#        - path/to/foo.proto
-
-  # Linter rules.
-  # Run prototool list-all-linters to see all available linters.
-#  rules:
-    # Determines whether or not to include the default set of linters.
-#    no_default: true
-
-    # The specific linters to add.
-#    add:
-#      - ENUM_NAMES_CAMEL_CASE
-#      - ENUM_NAMES_CAPITALIZED
-
-    # The specific linters to remove.
-#    remove:
-#      - ENUM_NAMES_CAMEL_CASE
-
-# Code generation directives.
 protoc_include_wkt: true
 allow_unused_imports: true
 
 generate:
   go_options:
     import_path: github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}
-
   plugins:
   - name: gogoslick
-      type: gogo
-      flags: plugins=grpc
-      output: ../gen/pb
+    type: gogo
+    flags: plugins=grpc
+    output: ../gen
   - name: gotemplate
-      type: go
-      flags: template_dir=../templates
-      output: ../gen
+    output: ../gen

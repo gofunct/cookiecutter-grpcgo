@@ -2,52 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7087faca-059b-4773-b2ee-4cb389a586fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.circleci/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/certs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/certs/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/cmd/root.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/cmd/serve.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/cmd/version.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/example/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/example/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/example/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/client/grpc/client.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/endpoints/endpoints.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/helpers/helpers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/services/prototool.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/services/prototool.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/session/gen/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/session/gen/client/grpc/client.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/session/gen/endpoints/endpoints.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/session/gen/pb/pb.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/session/gen/transports/grpc/grpc.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/session/gen/transports/http/http.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/session/service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/session/session.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/session/session.proto" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/sprint/gen/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/sprint/gen/client/grpc/client.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/sprint/gen/endpoints/endpoints.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/sprint/gen/pb/pb.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/sprint/gen/transports/grpc/grpc.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/sprint/gen/transports/http/http.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/sprint/service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/sprint/sprint.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/sprint/sprint.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/transports/grpc/grpc.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/transports/http/http.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/user/gen/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/user/gen/client/grpc/client.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/user/gen/endpoints/endpoints.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/user/gen/pb/pb.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/user/gen/transports/grpc/grpc.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/services/user/gen/transports/http/http.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/user/service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/user/user.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/services/user/user.proto" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/templates" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/vendor/github.com/dgrijalva/jwt-go/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/vendor/github.com/dgrijalva/jwt-go/.travis.yml" beforeDir="false" />
@@ -794,8 +770,24 @@
       <change beforePath="$PROJECT_DIR$/example/vendor/gopkg.in/yaml.v2/yamlh.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/vendor/gopkg.in/yaml.v2/yamlprivateh.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/vendor/modules.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/version/version.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/session/gen/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/session/gen/client/grpc/client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/session/gen/endpoints/endpoints.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/session/gen/pb/pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/session/gen/transports/grpc/grpc.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/session/gen/transports/http/http.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/sprint/gen/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/sprint/gen/client/grpc/client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/sprint/gen/endpoints/endpoints.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/sprint/gen/pb/pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/sprint/gen/transports/grpc/grpc.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/sprint/gen/transports/http/http.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/gen/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/gen/client/grpc/client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/gen/endpoints/endpoints.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/gen/pb/pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/gen/transports/grpc/grpc.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/gen/transports/http/http.go" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -833,7 +825,7 @@
           <entry key="tmpl" value="19" />
           <entry key="toml" value="1" />
           <entry key="txt" value="3" />
-          <entry key="yaml" value="2" />
+          <entry key="yaml" value="3" />
           <entry key="yml" value="2" />
         </counts>
       </usages-collector>
@@ -849,14 +841,14 @@
           <entry key="Markdown" value="8" />
           <entry key="PLAIN_TEXT" value="38" />
           <entry key="PROTO" value="4" />
-          <entry key="YAML" value="4" />
+          <entry key="YAML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="30" />
           <entry key="LICENSE" value="12" />
-          <entry key="Makefile" value="586" />
+          <entry key="Makefile" value="634" />
           <entry key="gitignore" value="39" />
           <entry key="go" value="989" />
           <entry key="json" value="469" />
@@ -865,7 +857,7 @@
           <entry key="proto" value="33" />
           <entry key="py" value="268" />
           <entry key="tmpl" value="44" />
-          <entry key="yaml" value="73" />
+          <entry key="yaml" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -874,23 +866,23 @@
           <entry key="Dockerfile" value="30" />
           <entry key="Go" value="989" />
           <entry key="JSON" value="469" />
-          <entry key="Makefile" value="586" />
+          <entry key="Makefile" value="634" />
           <entry key="Markdown" value="335" />
           <entry key="PLAIN_TEXT" value="95" />
           <entry key="PROTO" value="33" />
           <entry key="Python" value="268" />
-          <entry key="YAML" value="73" />
+          <entry key="YAML" value="74" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="43" column="94" selection-start-line="43" selection-start-column="81" selection-end-line="43" selection-end-column="94" />
+            <state relative-caret-position="266">
+              <caret line="30" column="37" selection-start-line="19" selection-start-column="4" selection-end-line="30" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -898,8 +890,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
+            <state relative-caret-position="313">
+              <caret line="73" column="1" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/example/services/prototool.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="80" lean-forward="true" selection-start-line="62" selection-end-line="80" />
             </state>
           </provider>
         </entry>
@@ -934,8 +935,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            <state relative-caret-position="75">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -1028,12 +1029,13 @@
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/gen.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/account.proto" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/account_service.proto" />
-        <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/example/go.mod" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/go.mod" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/prototool.yaml" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/example/services/prototool.yaml" />
       </list>
     </option>
   </component>
@@ -1086,6 +1088,33 @@
               <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
               <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
+              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
+              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="session" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
+              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
+              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -1135,9 +1164,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26190478" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26190478" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1150,7 +1178,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32932693" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32932693" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Copy/Paste" />
       <window_info anchor="right" id="PlantUML" />
@@ -1172,7 +1200,6 @@
     <proxy>direct</proxy>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/.gitignore" />
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/AUTHORS.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1336,13 +1363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/serve.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -1350,17 +1370,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
+        <state relative-caret-position="266">
+          <caret line="30" column="37" selection-start-line="19" selection-start-column="4" selection-end-line="30" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
+    <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="43" column="94" selection-start-line="43" selection-start-column="81" selection-end-line="43" selection-end-column="94" />
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="73" column="1" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/services/prototool.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="80" lean-forward="true" selection-start-line="62" selection-end-line="80" />
         </state>
       </provider>
     </entry>
