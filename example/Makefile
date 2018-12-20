@@ -24,10 +24,10 @@ setup: ## download dependencies and tls certificates
 	go get -u \
 		google.golang.org/grpc \
 		github.com/golang/protobuf/protoc-gen-go \
-		go get github.com/gogo/protobuf/... \
 		github.com/ckaznocha/protoc-gen-lint \
 		github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc \
-		moul.io/protoc-gen-gotemplate
+		moul.io/protoc-gen-gotemplate \
+		github.com/gogo/protobuf/...
 
 build: setup vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
 	@echo "building ${BIN_NAME} ${VERSION}"

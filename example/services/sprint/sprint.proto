@@ -3,14 +3,15 @@ syntax = "proto3";
 package sprint;
 
 service SprintService {
-  rpc AddSprint(AddSprintRequest) returns (AddSprintResponse) {}
-  rpc CloseSprint(CloseSprintRequest) returns (CloseSprintResponse) {}
-  rpc GetSprint(GetSprintRequest) returns (GetSprintResponse) {}
+  rpc AddSprint(AddSprintRequest) returns (AddSprintResponse);
+  rpc CloseSprint(CloseSprintRequest) returns (CloseSprintResponse);
+  rpc GetSprint(GetSprintRequest) returns (GetSprintResponse);
 }
 
 message AddSprintRequest {
   string name = 1;
 }
+
 message AddSprintResponse {
   Sprint sprint = 1;
   string err_msg = 2;
@@ -19,6 +20,7 @@ message AddSprintResponse {
 message CloseSprintRequest {
   string id = 1;
 }
+
 message CloseSprintResponse {
   string err_msg = 1;
 }
@@ -26,6 +28,7 @@ message CloseSprintResponse {
 message GetSprintRequest {
   string id = 1;
 }
+
 message GetSprintResponse {
   Sprint sprint = 1;
   string err_msg = 2;
