@@ -21,6 +21,9 @@ import (
 	user_httptransport "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/gen/user/transports/http"
 )
 
+func init() {
+	rootCmd.AddCommand(serveCmd)
+}
 
 var serveCmd = &cobra.Command{
 	Use: "serve",
