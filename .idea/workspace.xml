@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7087faca-059b-4773-b2ee-4cb389a586fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" afterDir="false" />
-    </list>
+    <list default="true" id="7087faca-059b-4773-b2ee-4cb389a586fa" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,7 @@
         <counts>
           <entry key="Dockerfile" value="30" />
           <entry key="LICENSE" value="12" />
-          <entry key="Makefile" value="548" />
+          <entry key="Makefile" value="557" />
           <entry key="gitignore" value="39" />
           <entry key="go" value="989" />
           <entry key="json" value="469" />
@@ -81,7 +79,7 @@
           <entry key="Dockerfile" value="30" />
           <entry key="Go" value="989" />
           <entry key="JSON" value="469" />
-          <entry key="Makefile" value="548" />
+          <entry key="Makefile" value="557" />
           <entry key="Markdown" value="335" />
           <entry key="PLAIN_TEXT" value="95" />
           <entry key="PROTO" value="33" />
@@ -105,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-143">
-              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+            <state relative-caret-position="690">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
         </entry>
@@ -547,8 +545,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-143">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        <state relative-caret-position="690">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>

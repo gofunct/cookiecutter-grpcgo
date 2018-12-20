@@ -13,7 +13,7 @@ TARGETS_GO :=	$(foreach source, $(SOURCES), $(source)_go)
 TARGETS_TMPL :=	$(foreach source, $(SOURCES), $(source)_tmpl)
 PROJECT_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}"
 SERVICE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"
-TEMPLATE_PATH := "vendor/github.com/gofunct/templates/{{.File.Package}}"
+TEMPLATE_PATH := "vendor/github.com/gofunct/templates"
 
 default: test
 
@@ -43,7 +43,7 @@ $(TARGETS_GO): %_go:
 	protoc --go_out=plugins=grpc:. "$*"
 
 $(TARGETS_TMPL): %_tmpl:
-	protoc -I. --gotemplate_out=destination_dir=services/$(call service_name,$*),template_dir=vendor/github.com/gofunct/templates/{{.File.Package}}:services "$*"
+	protoc -I. --gotemplate_out=destination_dir=services/$(call service_name,$*),template_dir=vendor/github.com/gofunct/templates:services "$*"
 
 regen: ## delete all files and regenerate project
 	rm -rf *
