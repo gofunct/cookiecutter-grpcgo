@@ -22,6 +22,7 @@ setup: ## download dependencies and tls certificates
 	git clone -q https://github.com/gofunct/templates.git
 	go get -u \
 		google.golang.org/grpc \
+		github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
 		github.com/golang/protobuf/protoc-gen-go \
 		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway \
 		github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger \
@@ -36,11 +37,8 @@ build: setup vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
 	@echo "GOPATH=${GOPATH}"
 	go build -ldflags "-X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
 
-$(TARGETS_GO): %_go:
-	protoc --go_out=plugins=grpc:. "$*"
-
-$(TARGETS_TMPL): %_tmpl:
-	protoc -I. --gotemplate_out=destination_dir=services/$(call service_name,$*),template_dir=templates/{{.File.Package}}:services "$*"
+gen:
+	prototool all services
 
 regen: ## delete all files and regenerate project
 	rm -rf *
