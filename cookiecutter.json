@@ -7,13 +7,13 @@
     "docker_image": "alpine",
     "docker_build_image": "gofunct/cookiecutter-grpcgo",
     "docker_build_image_version": ["1.11", "1.10.3", "1.9.7"],
-    "use_go_mod": "y",
-    "use_docker": "y",
-    "use_git": "y",
     "viper_config_name": "config",
     "grpc_port": 9090,
     "http_port": 8080,
     "log_level": "debug",
-    "json_logs": "true",
-    "use_circle_ci": "y"
+    "json_logs": "y",
+    "use_docker": "y",
+    "use_tls": "y",
+    "go_mod_or_dep": ["dep", "mod"],
+    "use_ci": ["travis", "circle", "none"]
 }

@@ -18,7 +18,7 @@ TEMPLATE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app
 
 default: test
 
-build: $(TARGETS_GO) $(TARGETS_TMPL) ## Compile the project.
+build: vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
 	@echo "building ${BIN_NAME} ${VERSION}"
 	@echo "GOPATH=${GOPATH}"
 	go build -ldflags "-X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
