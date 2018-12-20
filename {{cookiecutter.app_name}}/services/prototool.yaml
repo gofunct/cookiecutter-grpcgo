@@ -8,4 +8,4 @@ generate:
   - name: gogoslick
     type: gogo
     flags: plugins=grpc
-    output: ../gen
+    output: .

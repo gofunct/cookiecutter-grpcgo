@@ -10,7 +10,7 @@ IMAGE_NAME := "gofunct/user"
 PROJECT_PATH := "github.com/gofunct/user"
 SERVICE_PATH := "github.com/gofunct/user/services"
 BIN_NAME=user
-service_name =	$(word 2,$(subst /, ,$1))BIN_NAME=user
+service_name =	$(word 2,$(subst /, ,$1))
 
 default: test
 
