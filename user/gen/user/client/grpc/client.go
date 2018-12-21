@@ -9,8 +9,8 @@ import (
         "github.com/go-kit/kit/endpoint"
         jwt "github.com/go-kit/kit/auth/jwt"
 
-        pb "github.com/gofunct/user/gen/user"
-        endpoints "github.com/gofunct/user/gen/user/endpoints"
+        pb "github.com/gofunct/cookiecutter-grpcgo/user/gen/user"
+        endpoints "github.com/gofunct/cookiecutter-grpcgo/user/gen/user/endpoints"
 )
 
 

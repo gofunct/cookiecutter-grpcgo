@@ -57,12 +57,12 @@ func runServer() {
 	go func() {
 		logger := log.With(kitLog, "transport", "HTTP")
 		logger.Log("addr", ":"+viper.GetString("http_port"))
-		errc <- http.ListenAndServe(":"+viper.GetString("http_port"), handlers.LoggingHandler(os.Stderr, mux))
+		errc <- http.ListenAndServe(viper.GetString(":"+"http_port"), handlers.LoggingHandler(os.Stderr, mux))
 	}()
 
 	go func() {
 		logger := log.With(kitLog, "transport", "gRPC")
-		ln, err := net.Listen("tcp", ":"+defaultConfig.GetString("grpc_port"))
+		ln, err := net.Listen("tcp", defaultConfig.GetString("grpc_port"))
 		if err != nil {
 			errc <- err
 			return

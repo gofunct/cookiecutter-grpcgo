@@ -57,7 +57,7 @@ func Init() {
                 defaultConfig.SetDefault("project_short_description", "{{cookiecutter.project_short_description}}")
                 defaultConfig.SetDefault("docker_hub_username", "{{cookiecutter.docker_hub_username}}")
                 defaultConfig.SetDefault("docker_image", "{{cookiecutter.docker_image}}")
-                defaultConfig.SetDefault("docker_build_image_version", "cookiecutter.docker_build_image_version}}")
+                defaultConfig.SetDefault("docker_build_image_version", "{{cookiecutter.docker_build_image_version}}")
                 defaultConfig.SetDefault("json_logs", "{{cookiecutter.json_logs}}")
                 defaultConfig.SetDefault("log_level", "{{cookiecutter.log_level}}")
                 defaultConfig.SetDefault("grpc_port", "{{cookiecutter.grpc_port}}")
