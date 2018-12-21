@@ -13,7 +13,7 @@ func init() {Init()}
 
 var (
         defaultConfig = viper.New()
-        kitLog = kitlog.NewJSONLogger(kitlog.NewSyncWriter(os.Stdout)
+        kitLog = kitlog.NewJSONLogger(kitlog.NewSyncWriter(os.Stdout))
 )
 
 // rootCmd represents the base command when called without any subcommands

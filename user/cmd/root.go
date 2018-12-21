@@ -12,14 +12,14 @@ import (
 func init() {Init()}
 
 var (
-        defaultConfig *viper.Viper
-        kitLog  kitlog.Logger
+        defaultConfig = viper.New()
+        kitLog = kitlog.NewJSONLogger(kitlog.NewSyncWriter(os.Stdout))
 )
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
         Use:   "user",
-        Short: "cookiecutter.project_short_description",
+        Short: "user description",
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
@@ -41,7 +41,6 @@ func GetKitLogger() kitlog.Logger {
 
 func Init() {
         {
-                kitLog = kitlog.NewJSONLogger(kitlog.NewSyncWriter(os.Stdout))
                 log.SetOutput(kitlog.NewStdlibAdapter(kitLog))
                 log.Println("new json logger registered")
         }
@@ -50,25 +49,25 @@ func Init() {
                 defaultConfig.AutomaticEnv()
                 defaultConfig.AddConfigPath(os.Getenv("$HOME")) // name of config file (without extension)
                 defaultConfig.AddConfigPath(".")
-                defaultConfig.SetEnvPrefix("cookiecutter.app_name")
-                defaultConfig.SetDefault("viper_config_name", "cookiecutter.viper_config_name")
-                defaultConfig.SetDefault("full_name", "cookiecutter.full_name")
-                defaultConfig.SetDefault("github_username", "cookiecutter.github_username")
-                defaultConfig.SetDefault("app_name", "cookiecutter.app_name")
-                defaultConfig.SetDefault("project_short_description", "cookiecutter.project_short_description")
-                defaultConfig.SetDefault("docker_hub_username", "cookiecutter.docker_hub_username")
-                defaultConfig.SetDefault("docker_image", "cookiecutter.docker_image")
-                defaultConfig.SetDefault("docker_build_image_version", "cookiecutter.docker_build_image_version")
-                defaultConfig.SetDefault("json_logs", "cookiecutter.json_logs")
-                defaultConfig.SetDefault("log_level", "cookiecutter.log_level")
-                defaultConfig.SetDefault("grpc_port", "cookiecutter.grpc_port")
-                defaultConfig.SetDefault("http_port", "cookiecutter.http_port")
+                defaultConfig.SetEnvPrefix("user")
+                defaultConfig.SetDefault("viper_config_name", "config")
+                defaultConfig.SetDefault("full_name", "Coleman Word")
+                defaultConfig.SetDefault("github_username", "gofunct")
+                defaultConfig.SetDefault("app_name", "user")
+                defaultConfig.SetDefault("project_short_description", "user description")
+                defaultConfig.SetDefault("docker_hub_username", "gofunct")
+                defaultConfig.SetDefault("docker_image", "alpine")
+                defaultConfig.SetDefault("docker_build_image_version", "cookiecutter.docker_build_image_version}}")
+                defaultConfig.SetDefault("json_logs", "y")
+                defaultConfig.SetDefault("log_level", "debug")
+                defaultConfig.SetDefault("grpc_port", "9090")
+                defaultConfig.SetDefault("http_port", "8080")
         }
 
         // If a config file is found, read it in.
         if err := defaultConfig.ReadInConfig(); err != nil {
                log.Println("failed to read config file, writing defaults...")
-                if err := defaultConfig.WriteConfigAs("cookiecutter.viper_config_name"+".yaml"); err != nil {
+                if err := defaultConfig.WriteConfigAs("config"+".yaml"); err != nil {
                         log.Fatal("failed to write config")
                         os.Exit(1)
                 }
