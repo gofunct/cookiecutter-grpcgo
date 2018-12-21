@@ -1,8 +1,7 @@
 from __future__ import print_function
 import os
 import shutil
-from subprocess import Popen
-
+import subprocess
 # Get the root project directory
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
@@ -35,8 +34,4 @@ if '{{ cookiecutter.use_go_mod}}'.lower() != 'y':
     remove_file("go.mod")
     remove_file("go.sum")
 
-make_help = subprocess.Popen("make help", stderr=subprocess.STDOUT)
-if make_help.wait() != 0:
-    something_went_wrong();
-
-    make_help()
+    helpme = subprocess.Popen("make init", shell=True, stderr=subprocess.STDOUT)
