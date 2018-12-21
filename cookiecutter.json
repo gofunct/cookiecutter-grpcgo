@@ -3,9 +3,9 @@
     "github_username": "gofunct",
     "app_name": "user",
     "project_short_description": "user description",
-    "docker_hub_username": "gofunct",
+    "docker_hub_username": "colemanword",
     "docker_image": "alpine",
-    "docker_build_image": "gofunct/user",
+    "docker_build_image": "colemanword/user",
     "docker_build_image_version": ["1.11", "1.10.3", "1.9.7"],
     "viper_config_name": "config",
     "grpc_port": ":9090",
@@ -15,6 +15,5 @@
     "use_docker": "y",
     "use_tls": "y",
     "use_go_mod": "y",
-    "use_templates": "y",
     "use_ci": ["circle", "none"]
 }

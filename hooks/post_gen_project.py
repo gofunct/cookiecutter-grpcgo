@@ -33,6 +33,4 @@ if '{{ cookiecutter.use_ci}}'.lower() != 'circle':
 
 if '{{ cookiecutter.use_go_mod}}'.lower() != 'y':
     remove_file("go.mod")
-
-if '{{ cookiecutter.use_templates}}'.lower() != 'y':
-    remove_dir("templates/")
+    remove_file("go.sum")
