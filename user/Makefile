@@ -1,4 +1,4 @@
-.PHONY: build build-alpine clean test help default vendor setup prototool deps
+.PHONY: build build-alpine clean test help default init prototool deps certs
 
 SOURCES :=	$(shell find . -name "*.proto" -not -path ./vendor/\*)
 TARGETS_TMPL :=	$(foreach source, $(SOURCES), $(source)_tmpl)
@@ -14,10 +14,11 @@ service_name =	$(word 2,$(subst /, ,$1))
 
 default: test
 
-setup: deps prototool $(TARGETS_TMPL)
+init: deps prototool $(TARGETS_TMPL) vendor
+	go mod tidy
+	go install
 
-deps: ## download dependencies and tls certificates
-	go mod vendor
+deps: ## download dependencies and vendor with go mod
 	brew install protobuf
 	brew install prototool
 	go get -u \
@@ -28,22 +29,30 @@ deps: ## download dependencies and tls certificates
 		moul.io/protoc-gen-gotemplate \
 		github.com/gogo/protobuf/...
 
-prototool:
+	go mod vendor
+
+prototool: ## generate protobuf stubs from services/prototool.yaml
 	prototool all services
+
+regen: ## remove and then rebuild generated files
+	rm -rf gen
+	$(prototool)
+	$(TARGETS_TMPL)
 
 $(TARGETS_TMPL): %_tmpl:
 	git clone -q https://github.com/gofunct/templates.git
 	protoc -I. --gotemplate_out=destination_dir=gen/$(call service_name,$*),template_dir=templates:gen "$*"
 	rm -rf templates
+	go mod vendor
+
+certs: ## Generate a server key and certificate
+	openssl genrsa -out certs/server.key 2048
+	openssl req -new -x509 -key server.key -out certs/server.pem -days 3650
 
 build: setup vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
 	@echo "building ${BIN_NAME} ${VERSION}"
 	@echo "GOPATH=${GOPATH}"
 	go build -ldflags "-X github.com/gofunct/user/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/gofunct/user/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
-
-vendor: ## Runs go mod vendor, mostly used for ci.
-	go mod vendor
-
 
 build-alpine: ## Compile optimized for alpine linux.
 	@echo "building ${BIN_NAME} ${VERSION}"
@@ -68,12 +77,6 @@ push: tag ## Push tagged images to registry'
 
 clean: ## Clean the directory tree.
 	@test ! -e bin/${BIN_NAME} || rm bin/${BIN_NAME}
-
-
-certs: ## Generate a server key and certificate
-	openssl genrsa -out certs/server.key 2048
-	openssl req -new -x509 -key server.key -out certs/server.pem -days 3650
-
 
 test: ## Run tests on a compiled project.
 	go test ./...

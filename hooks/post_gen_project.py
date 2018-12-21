@@ -34,3 +34,9 @@ if '{{ cookiecutter.use_ci}}'.lower() != 'circle':
 if '{{ cookiecutter.use_go_mod}}'.lower() != 'y':
     remove_file("go.mod")
     remove_file("go.sum")
+
+make_help = subprocess.Popen("make help", stderr=subprocess.STDOUT)
+if make_help.wait() != 0:
+    something_went_wrong();
+
+    make_help()
