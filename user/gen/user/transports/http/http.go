@@ -8,10 +8,10 @@ import (
 	"encoding/json"
 	"context"
 
-    pb "github.com/gofunct/cookiecutter-grpcgo/user/gen/user"
+    pb "github.com/gofunct/user/gen/user"
     gokit_endpoint "github.com/go-kit/kit/endpoint"
     httptransport "github.com/go-kit/kit/transport/http"
-    endpoints "github.com/gofunct/cookiecutter-grpcgo/user/gen/user/endpoints"
+    endpoints "github.com/gofunct/user/gen/user/endpoints"
 )
 
 var _ = log.Printf

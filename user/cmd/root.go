@@ -57,11 +57,11 @@ func Init() {
                 defaultConfig.SetDefault("project_short_description", "user description")
                 defaultConfig.SetDefault("docker_hub_username", "gofunct")
                 defaultConfig.SetDefault("docker_image", "alpine")
-                defaultConfig.SetDefault("docker_build_image_version", "cookiecutter.docker_build_image_version}}")
+                defaultConfig.SetDefault("docker_build_image_version", "1.11")
                 defaultConfig.SetDefault("json_logs", "y")
                 defaultConfig.SetDefault("log_level", "debug")
-                defaultConfig.SetDefault("grpc_port", "9090")
-                defaultConfig.SetDefault("http_port", "8080")
+                defaultConfig.SetDefault("grpc_port", ":9090")
+                defaultConfig.SetDefault("http_port", ":8080")
         }
 
         // If a config file is found, read it in.

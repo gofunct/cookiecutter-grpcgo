@@ -22,7 +22,7 @@ ARG VERSION
 LABEL REPO="https://github.com/gofunct/user"
 LABEL GIT_COMMIT=$GIT_COMMIT
 LABEL VERSION=$VERSION
-EXPOSE  9090 8080
+EXPOSE  :9090 :8080
 
 # Because of https://github.com/docker/docker/issues/14914
 ENV PATH=$PATH:/opt/user/bin

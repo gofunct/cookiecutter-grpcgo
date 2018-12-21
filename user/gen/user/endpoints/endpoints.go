@@ -6,7 +6,7 @@ import (
 	context "context"
 	"fmt"
 	oldcontext "golang.org/x/net/context"
-    pb "github.com/gofunct/cookiecutter-grpcgo/user/gen/user"
+    pb "github.com/gofunct/user/gen/user"
 	"github.com/go-kit/kit/endpoint"
 )
 

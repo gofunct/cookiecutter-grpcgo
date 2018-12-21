@@ -4,7 +4,6 @@ package cmd
 import (
 	"fmt"
 	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
 	"net"
 	"net/http"
 	"os"
@@ -56,8 +55,8 @@ func runServer() {
 
 	go func() {
 		logger := log.With(kitLog, "transport", "HTTP")
-		logger.Log("addr", ":"+viper.GetString("http_port"))
-		errc <- http.ListenAndServe(viper.GetString(":"+"http_port"), handlers.LoggingHandler(os.Stderr, mux))
+		logger.Log("addr", defaultConfig.GetString("http_port"))
+		errc <- http.ListenAndServe(defaultConfig.GetString("http_port"), handlers.LoggingHandler(os.Stderr, mux))
 	}()
 
 	go func() {
@@ -67,7 +66,7 @@ func runServer() {
 			errc <- err
 			return
 		}
-		logger.Log("addr", ":"+defaultConfig.GetString("grpc_port"))
+		logger.Log("addr", defaultConfig.GetString("grpc_port"))
 		errc <- s.Serve(ln)
 	}()
 
