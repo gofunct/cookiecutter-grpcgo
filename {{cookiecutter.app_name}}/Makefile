@@ -15,6 +15,7 @@ service_name =	$(word 2,$(subst /, ,$1))
 default: test
 
 setup: deps prototool $(TARGETS_TMPL)
+	go mod vendor
 
 deps: ## download dependencies and tls certificates
 	go mod vendor
@@ -33,7 +34,7 @@ prototool:
 
 $(TARGETS_TMPL): %_tmpl:
 	git clone -q https://github.com/gofunct/templates.git
-	protoc -I. --gotemplate_out=destination_dir=gen/$(call service_name,$*),template_dir=templates:gen "$*"
+	protoc -I. --gotemplate_out=destination_dir=gen/$(call service_name,$*),debug=true,template_dir=templates:gen "$*"
 	rm -rf templates
 
 build: setup vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
