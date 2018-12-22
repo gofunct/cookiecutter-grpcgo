@@ -40,6 +40,12 @@
 #     You can remember this because in make rules, % is like * on
 #     the shell, so $* is telling you what matched the pattern..
 
+IMAGE_NAME := "{{cookiecutter.docker_hub_username}}/{{cookiecutter.app_name}}"
+PROJECT_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}"
+SERVICE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"
+BIN_NAME={{cookiecutter.app_name}}
+
+
 .PHONY: build build-alpine clean test help default vendor init gen deps
 
 SOURCES :=	$(shell find . -name "*.proto" -not -path ./vendor/\*)
@@ -48,16 +54,13 @@ VERSION := $(shell grep "const Version " version/version.go | sed -E 's/.*"(.+)"
 GIT_COMMIT=$(shell git rev-parse HEAD)
 GIT_DIRTY=$(shell test -n "`git status --porcelain`" && echo "+CHANGES" || true)
 BUILD_DATE=$(shell date '+%Y-%m-%d-%H:%M:%S')
-IMAGE_NAME := "{{cookiecutter.docker_hub_username}}/{{cookiecutter.app_name}}"
-PROJECT_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}"
-SERVICE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"
-BIN_NAME={{cookiecutter.app_name}}
+
 service_name =	$(word 2,$(subst /, ,$1))
 
 default: test
 
 init: vendor gen $(TARGETS_TMPL)
-	go install
+	export GOMODULES=on;go install
 
 gen:
 	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 all /defs/{{cookiecutter.app_name}}/services
