@@ -54,13 +54,14 @@ VERSION := $(shell grep "const Version " version/version.go | sed -E 's/.*"(.+)"
 GIT_COMMIT=$(shell git rev-parse HEAD)
 GIT_DIRTY=$(shell test -n "`git status --porcelain`" && echo "+CHANGES" || true)
 BUILD_DATE=$(shell date '+%Y-%m-%d-%H:%M:%S')
+MODULES=$(shell export GOMODULES=on)
 
 service_name =	$(word 2,$(subst /, ,$1))
 
 default: test
 
 init: vendor gen $(TARGETS_TMPL)
-	export GOMODULES=on;go install
+	$(MODULES);go install
 
 gen:
 	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 all /defs/{{cookiecutter.app_name}}/services
