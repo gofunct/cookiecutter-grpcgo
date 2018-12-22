@@ -17,7 +17,6 @@ default: test
 init: deps prototool $(TARGETS_TMPL)
 	go mod vendor
 	go install
-	{{cookiecutter.app_name}} serve
 
 deps: ## download dependencies and tls certificates
 	go mod vendor
