@@ -94,34 +94,15 @@ message SyncUserRequest {
 }
 
 service AccountService {
-  rpc Create(CreateAccountRequest) returns (Account) {
-    option (google.api.http) = {
-			post: "/v1/accounts"
-            body: "*"
-		};
-  }
-  rpc List(GetAccountListRequest) returns (AccountList) {
-    option (google.api.http) = {
-		    get: "/v1/accounts"
-		};
-  }
-  rpc Get(GetAccountRequest) returns (Account) {
-    option (google.api.http) = {
-			get: "/v1/accounts/{uuid}"
-		};
-  }
-  rpc Update(Account) returns (Account) {
-    option (google.api.http) = {
-			put: "/v1/accounts/{uuid}"
-			body: "*"
-		};
-  }
-  rpc UpdatePassword(UpdatePasswordRequest) returns (google.protobuf.Empty) {
-    option (google.api.http) = {
-			put: "/v1/accounts/{uuid}/password"
-			body: "*"
-		};
-  }
+  rpc Create(CreateAccountRequest) returns (Account) {}
+
+  rpc List(GetAccountListRequest) returns (AccountList) {}
+
+  rpc Get(GetAccountRequest) returns (Account) {}
+
+  rpc Update(Account) returns (Account) {}
+
+  rpc UpdatePassword(UpdatePasswordRequest) returns (google.protobuf.Empty) {}
 
   rpc RequestPasswordReset(PasswordResetRequest) returns (google.protobuf.Empty) {}
 

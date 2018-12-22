@@ -30,6 +30,7 @@ deps: ## download dependencies and tls certificates
 		moul.io/protoc-gen-gotemplate \
 		google.golang.org/genproto/googleapis/api/annotations\... \
 		github.com/gogo/protobuf/...
+		go mod vendor
 
 prototool:
 	prototool all services
