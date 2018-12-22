@@ -3,7 +3,7 @@ protoc:
 
 generate:
   go_options:
-    import_path: github.com/gofunct/user
+    import_path: "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}"
     extra_modifiers:
       google/api/annotations.proto: google.golang.org/genproto/googleapis/api/annotations
       google/api/http.proto: google.golang.org/genproto/googleapis/api/annotations
