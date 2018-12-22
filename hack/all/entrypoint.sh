@@ -3,8 +3,6 @@
 set -e
 
 printUsage() {
-    echo "gen-proto generates grpc and protobuf"
-    echo " "
     echo "Usage: gen-proto -f my-service.proto -l go"
     echo " "
     echo "options:"
@@ -21,15 +19,15 @@ printUsage() {
 }
 
 
-GEN_GATEWAY=false
-GEN_DOCS=false
+GEN_GATEWAY=true
+GEN_DOCS=true
 DOCS_FORMAT="html,index.html"
 LINT=false
 LINT_CHECKS=""
 SUPPORTED_LANGUAGES=("go" "ruby" "csharp" "java" "python" "objc" "gogo" "php" "node" "web")
 EXTRA_INCLUDES=""
-OUT_DIR=""
-GO_SOURCE_RELATIVE=""
+OUT_DIR="."
+GO_SOURCE_RELATIVE="paths=source_relative,"
 
 while test $# -gt 0; do
     case "$1" in
