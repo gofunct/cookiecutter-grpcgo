@@ -3,7 +3,6 @@ protoc:
 
 protoc_includes:
   - ../vendor/
-
   protoc_include_wkt: true
 
 # If not set, compile will fail if there are unused imports.
