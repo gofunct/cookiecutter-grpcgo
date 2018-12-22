@@ -1,12 +1,13 @@
 syntax = "proto3";
 
-package user;
-
 option go_package = "userpb";
 option java_multiple_files = true;
 option java_outer_classname = "UserProto";
 option java_package = "com.user";
 import "google/protobuf/empty.proto";
+
+package user;
+
 
 message Account {
   string id = 1;
