@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7087faca-059b-4773-b2ee-4cb389a586fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +66,7 @@
         <counts>
           <entry key="Dockerfile" value="33" />
           <entry key="LICENSE" value="12" />
-          <entry key="Makefile" value="1385" />
+          <entry key="Makefile" value="1397" />
           <entry key="gitignore" value="39" />
           <entry key="go" value="1690" />
           <entry key="json" value="560" />
@@ -84,7 +84,7 @@
           <entry key="Dockerfile" value="33" />
           <entry key="Go" value="1690" />
           <entry key="JSON" value="560" />
-          <entry key="Makefile" value="1385" />
+          <entry key="Makefile" value="1397" />
           <entry key="Markdown" value="335" />
           <entry key="PLAIN_TEXT" value="95" />
           <entry key="PROTO" value="163" />
@@ -96,20 +96,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
+            <state relative-caret-position="299">
+              <caret line="20" column="110" selection-start-line="20" selection-start-column="110" selection-end-line="20" selection-end-column="110" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="96" selection-start-line="5" selection-start-column="96" selection-end-line="5" selection-end-column="96" />
+            <state relative-caret-position="240">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -274,8 +274,8 @@
         <option value="$PROJECT_DIR$/grpclab/Makefile" />
         <option value="$PROJECT_DIR$/hack/Dockerfile" />
         <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" />
       </list>
     </option>
   </component>
@@ -710,17 +710,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="96" selection-start-line="5" selection-start-column="96" selection-end-line="5" selection-end-column="96" />
+        <state relative-caret-position="299">
+          <caret line="20" column="110" selection-start-line="20" selection-start-column="110" selection-end-line="20" selection-end-column="110" />
         </state>
       </provider>
     </entry>
