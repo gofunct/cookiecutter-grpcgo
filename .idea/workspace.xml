@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7087faca-059b-4773-b2ee-4cb389a586fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/store.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grpclab" beforeDir="false" afterPath="$PROJECT_DIR$/grpclab" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +30,7 @@
           <entry key="LICENSE" value="1" />
           <entry key="Makefile" value="16" />
           <entry key="gitignore" value="5" />
-          <entry key="go" value="54" />
+          <entry key="go" value="57" />
           <entry key="ini" value="1" />
           <entry key="json" value="4" />
           <entry key="md" value="8" />
@@ -50,7 +52,7 @@
           <entry key="DTD" value="3" />
           <entry key="Dockerfile" value="4" />
           <entry key="Git file" value="1" />
-          <entry key="Go" value="48" />
+          <entry key="Go" value="51" />
           <entry key="JSON" value="4" />
           <entry key="Makefile" value="16" />
           <entry key="Markdown" value="8" />
@@ -65,7 +67,7 @@
           <entry key="LICENSE" value="12" />
           <entry key="Makefile" value="1270" />
           <entry key="gitignore" value="39" />
-          <entry key="go" value="1427" />
+          <entry key="go" value="1455" />
           <entry key="json" value="560" />
           <entry key="md" value="335" />
           <entry key="mod" value="27" />
@@ -79,7 +81,7 @@
         <counts>
           <entry key="DTD" value="27" />
           <entry key="Dockerfile" value="30" />
-          <entry key="Go" value="1427" />
+          <entry key="Go" value="1455" />
           <entry key="JSON" value="560" />
           <entry key="Makefile" value="1270" />
           <entry key="Markdown" value="335" />
@@ -94,10 +96,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/root.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grpclab/cmd/serve.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+            <state relative-caret-position="14">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
               <folding>
                 <element signature="e#14#505#0" expanded="true" />
               </folding>
@@ -114,11 +125,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grpclab/gen/user/server/server.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="-38">
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/serve.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#14#720#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/store/store.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#15#78#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -185,7 +220,7 @@
   </component>
   <component name="GOROOT" path="/usr/local/opt/go/libexec" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/grpclab" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -193,7 +228,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/log/log.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/config/config.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/proxy.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Dockerfile" />
@@ -229,7 +263,6 @@
         <option value="$PROJECT_DIR$/user/gen/user/endpoints/endpoints.go" />
         <option value="$PROJECT_DIR$/user/gen/user/transports/grpc/grpc.go" />
         <option value="$PROJECT_DIR$/user/gen/user/transports/http/http.go" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/serve.go" />
         <option value="$PROJECT_DIR$/user/gen/user/client/grpc/client.go" />
         <option value="$PROJECT_DIR$/user/cmd/root.go" />
         <option value="$PROJECT_DIR$/user/cmd/serve.go" />
@@ -244,6 +277,8 @@
         <option value="$PROJECT_DIR$/grpclab/gen/user/server/server.go" />
         <option value="$PROJECT_DIR$/grpclab/services/user/service.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/service.go" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/serve.go" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/store.go" />
       </list>
     </option>
   </component>
@@ -253,7 +288,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="947" />
@@ -289,47 +324,7 @@
             <path>
               <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
               <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="grpclab" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="grpclab" type="462c0819:PsiDirectoryNode" />
-              <item name="cmd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="grpclab" type="462c0819:PsiDirectoryNode" />
-              <item name="gen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="grpclab" type="462c0819:PsiDirectoryNode" />
-              <item name="gen" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="grpclab" type="462c0819:PsiDirectoryNode" />
-              <item name="gen" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="grpclab" type="462c0819:PsiDirectoryNode" />
-              <item name="gen" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -379,7 +374,8 @@
     </option>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="947" extended-state="1" />
+    <frame x="0" y="23" width="1680" height="947" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26800978" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -423,7 +419,6 @@
     <proxy>direct</proxy>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/example/go.sum" />
     <entry file="file://$PROJECT_DIR$/example/go.mod" />
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/go.mod">
       <provider selected="true" editor-type-id="text-editor">
@@ -487,23 +482,9 @@
     <entry file="file://$PROJECT_DIR$/user/gen/user/user.pb.go" />
     <entry file="file://$PROJECT_DIR$/user/main.go" />
     <entry file="file://$PROJECT_DIR$/user/cmd/version.go" />
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/serve.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/gen/user/client/grpc/client.go" />
     <entry file="file://$PROJECT_DIR$/user/cmd/root.go" />
     <entry file="file://$PROJECT_DIR$/user/cmd/serve.go" />
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/root.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="59" column="74" selection-start-line="59" selection-start-column="74" selection-end-line="59" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/services/prototool.yaml" />
     <entry file="file://$PROJECT_DIR$/user/Makefile" />
     <entry file="file://$PROJECT_DIR$/hooks/post_gen_project.py">
@@ -600,8 +581,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grpclab/cmd/serve.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        <state relative-caret-position="14">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
           <folding>
             <element signature="e#14#505#0" expanded="true" />
           </folding>
@@ -617,8 +598,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grpclab/gen/user/server/server.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="-38">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/root.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/serve.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#14#720#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/store/store.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#15#78#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
