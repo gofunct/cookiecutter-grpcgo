@@ -61,11 +61,16 @@ service_name =	$(word 2,$(subst /, ,$1))
 default: test
 
 init: gen $(TARGETS_TMPL)
-	go mod vendor
+	dep ensure
+	go install proto_ext/...
 	go install
 
 gen:
-	go mod vendor
+	dep ensure
+	go get github.com/gogo/protobuf/protoc-gen-gogoslick
+	go get github.com/gofunct/proto-generator/proto_ext/cobracli
+	go get github.com/gofunct/proto-generator/proto_ext/gotmpl
+	go get github.com/gofunct/proto-generator/proto_ext/slick
 	docker run -v `pwd`:/defs colemanword/protoc-all:1.17_0 -d services -l go
 
 protofiles:

@@ -2,9 +2,548 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7087faca-059b-4773-b2ee-4cb389a586fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Gopkg.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Gopkg.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/link.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gemnasium/migrate/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gemnasium/migrate/driver/driver.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gemnasium/migrate/driver/postgres/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gemnasium/migrate/driver/postgres/postgres.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gemnasium/migrate/driver/registry.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gemnasium/migrate/file/file.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gemnasium/migrate/migrate/direction/direction.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gemnasium/migrate/migrate/migrate.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gemnasium/migrate/pipe/pipe.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/doc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/error.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/hook.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/error.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/internal.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/log.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/parser/array_parser.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/parser/composite_parser.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/parser/hstore_parser.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/parser/parser.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/parser/util.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/pool/conn.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/pool/elastic_reader.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/pool/pool.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/pool/pool_single.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/pool/reader.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/pool/write_buffer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/safe.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/strconv.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/underscore.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/unsafe.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/internal/util.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/listener.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/messages.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/options.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/composite.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/composite_create.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/composite_drop.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/count_estimate.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/delete.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/field.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/format.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/hook.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/inflection.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/insert.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/join.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/model_discard.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/model_func.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/model_scan.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/model_slice.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/model_table.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/model_table_m2m.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/model_table_many.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/model_table_slice.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/model_table_struct.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/orm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/pager.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/query.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/relation.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/result.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/select.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/table.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/table_create.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/table_drop.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/table_params.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/tables.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/tag.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/update.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/url_filter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/url_values.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/util.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/orm/zero.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/pg.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/result.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/stmt.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/time.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/tx.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/append.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/append_array.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/append_field.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/append_hstore.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/append_jsonb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/append_value.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/array.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/hstore.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/in_op.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/interface.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/scan.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/scan_array.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/scan_hstore.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/scan_value.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-pg/pg/types/time.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/locales/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/locales/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/locales/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/locales/currency/currency.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/locales/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/locales/rules.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/universal-translator/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/universal-translator/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/universal-translator/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/universal-translator/errors.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/universal-translator/import_export.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/universal-translator/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/universal-translator/translator.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/go-playground/universal-translator/universal_translator.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/jinzhu/inflection/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/jinzhu/inflection/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/jinzhu/inflection/inflections.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/jinzhu/inflection/wercker.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/konsorten/go-windows-terminal-sequences/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/konsorten/go-windows-terminal-sequences/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/konsorten/go-windows-terminal-sequences/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/konsorten/go-windows-terminal-sequences/sequences.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/leodido/go-urn/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/leodido/go-urn/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/leodido/go-urn/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/leodido/go-urn/machine.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/leodido/go-urn/machine.go.rl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/leodido/go-urn/makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/leodido/go-urn/urn.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/.travis.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/TESTS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/array.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/buf.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/conn.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/conn_go18.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/connector.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/copy.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/doc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/encode.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/error.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/notify.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/oid/doc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/oid/gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/oid/types.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/rows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/ssl.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/ssl_go1.7.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/ssl_permissions.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/ssl_renegotiation.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/ssl_windows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/url.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/user_posix.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/user_windows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/lib/pq/uuid.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/alt_exit.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/appveyor.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/doc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/entry.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/exported.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/formatter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/hooks.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/json_formatter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/logger.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/logrus.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/terminal_check_appengine.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/terminal_check_js.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/terminal_check_notappengine.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/terminal_check_windows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/terminal_notwindows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/terminal_windows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/text_formatter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/sirupsen/logrus/writer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/AUTHORS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/CONTRIBUTORS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/PATENTS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/bcrypt/base64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/bcrypt/bcrypt.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/blowfish/block.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/blowfish/cipher.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/blowfish/const.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/pbkdf2/pbkdf2.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/ssh/terminal/terminal.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/ssh/terminal/util.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/ssh/terminal/util_aix.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/ssh/terminal/util_bsd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/ssh/terminal/util_linux.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/ssh/terminal/util_plan9.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/ssh/terminal/util_solaris.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/crypto/ssh/terminal/util_windows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/AUTHORS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/CONTRIBUTORS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/PATENTS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/affinity_linux.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/aliases.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_aix_ppc64.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_darwin_386.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_darwin_amd64.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_darwin_arm.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_darwin_arm64.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_dragonfly_amd64.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_freebsd_386.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_freebsd_amd64.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_freebsd_arm.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_linux_386.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_linux_amd64.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_linux_arm.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_linux_arm64.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_linux_mips64x.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_linux_mipsx.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_linux_ppc64x.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_linux_s390x.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_netbsd_386.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_netbsd_amd64.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_netbsd_arm.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_openbsd_386.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_openbsd_amd64.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_openbsd_arm.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/asm_solaris_amd64.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/bluetooth_linux.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/cap_freebsd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/constants.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/dev_aix_ppc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/dev_aix_ppc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/dev_darwin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/dev_dragonfly.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/dev_freebsd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/dev_linux.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/dev_netbsd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/dev_openbsd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/dirent.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/endian_big.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/endian_little.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/env_unix.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/errors_freebsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/errors_freebsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/errors_freebsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/fcntl.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/fcntl_linux_32bit.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/gccgo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/gccgo_c.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/gccgo_linux_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ioctl.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mkall.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mkasm_darwin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mkerrors.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mkpost.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mksyscall.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mksyscall_aix_ppc.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mksyscall_aix_ppc64.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mksyscall_solaris.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mksysctl_openbsd.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mksysnum_darwin.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mksysnum_dragonfly.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mksysnum_freebsd.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mksysnum_netbsd.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/mksysnum_openbsd.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/openbsd_pledge.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/openbsd_unveil.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/pagesize_unix.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/race.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/race0.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/sockcmsg_linux.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/sockcmsg_unix.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/str.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_aix.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_aix_ppc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_aix_ppc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_bsd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_darwin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_darwin_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_darwin_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_darwin_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_darwin_arm64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_darwin_libSystem.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_dragonfly.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_dragonfly_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_freebsd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_freebsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_freebsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_freebsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_amd64_gc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_arm64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_gc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_gc_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_gccgo_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_gccgo_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_mips64x.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_mipsx.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_ppc64x.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_riscv64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_s390x.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_linux_sparc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_netbsd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_netbsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_netbsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_netbsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_openbsd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_openbsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_openbsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_openbsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_solaris.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_solaris_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_unix.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_unix_gc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/syscall_unix_gc_ppc64x.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/timestruct.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/types_aix.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/types_darwin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/types_dragonfly.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/types_freebsd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/types_netbsd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/types_openbsd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/types_solaris.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/xattr_bsd.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_aix_ppc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_aix_ppc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_darwin_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_darwin_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_darwin_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_darwin_arm64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_dragonfly_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_freebsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_freebsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_freebsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_linux_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_linux_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_linux_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_linux_arm64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_linux_mips.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_linux_mips64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_linux_mips64le.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_linux_mipsle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_linux_ppc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_linux_ppc64le.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_linux_riscv64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_linux_s390x.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_linux_sparc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_netbsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_netbsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_netbsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_openbsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_openbsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_openbsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zerrors_solaris_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zptrace386_linux.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zptracearm_linux.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zptracemips_linux.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zptracemipsle_linux.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_aix_ppc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_aix_ppc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_aix_ppc64_gc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_aix_ppc64_gccgo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_darwin_386.1_11.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_darwin_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_darwin_386.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_darwin_amd64.1_11.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_darwin_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_darwin_amd64.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_darwin_arm.1_11.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_darwin_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_darwin_arm.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_darwin_arm64.1_11.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_darwin_arm64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_darwin_arm64.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_dragonfly_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_freebsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_freebsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_freebsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_linux_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_linux_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_linux_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_linux_arm64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_linux_mips.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_linux_mips64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_linux_mips64le.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_linux_mipsle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_linux_ppc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_linux_ppc64le.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_linux_riscv64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_linux_s390x.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_linux_sparc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_netbsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_netbsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_netbsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_openbsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_openbsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_openbsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsyscall_solaris_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysctl_openbsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysctl_openbsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysctl_openbsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_darwin_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_darwin_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_darwin_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_darwin_arm64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_dragonfly_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_freebsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_freebsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_freebsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_linux_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_linux_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_linux_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_linux_arm64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_linux_mips.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_linux_mips64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_linux_mips64le.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_linux_mipsle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_linux_ppc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_linux_ppc64le.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_linux_riscv64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_linux_s390x.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_linux_sparc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_netbsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_netbsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_netbsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_openbsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_openbsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/zsysnum_openbsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_aix_ppc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_aix_ppc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_darwin_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_darwin_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_darwin_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_darwin_arm64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_dragonfly_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_freebsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_freebsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_freebsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_linux_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_linux_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_linux_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_linux_arm64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_linux_mips.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_linux_mips64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_linux_mips64le.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_linux_mipsle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_linux_ppc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_linux_ppc64le.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_linux_riscv64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_linux_s390x.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_linux_sparc64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_netbsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_netbsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_netbsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_openbsd_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_openbsd_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_openbsd_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/unix/ztypes_solaris_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/aliases.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/asm_windows_386.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/asm_windows_amd64.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/asm_windows_arm.s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/dll_windows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/env_windows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/eventlog.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/exec_windows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/memory_windows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/mksyscall.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/race.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/race0.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/security_windows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/str.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/syscall.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/syscall_windows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/types_windows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/types_windows_386.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/types_windows_amd64.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/types_windows_arm.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/golang.org/x/sys/windows/zsyscall_windows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/baked_in.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/cache.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/doc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/errors.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/field_level.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/regexes.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/struct_level.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/translations.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/util.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/validator.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/go-playground/validator.v9/validator_instance.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/bitbucket-pipelines.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/doc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/mechanism.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/negotiator.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/nonce.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/options.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/plain.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/scram.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/xor_generic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/mellium.im/sasl/xor_unaligned.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gogoproto/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gogoproto/doc.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gogoproto/gogo.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gogoproto/gogo.pb.golden" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gogoproto/gogo.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gogoproto/helper.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/protoc-gen-gogoslick/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gogo/protobuf/proto/custom_gogo.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gogo/protobuf/proto/lib_gogo.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gogo/protobuf/proto/properties_gogo.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gogo/protobuf/proto/timestamp_gogo.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/github.com/gogo/protobuf/vanity/enum.go" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,22 +568,22 @@
         <counts>
           <entry key="Dockerfile" value="8" />
           <entry key="LICENSE" value="1" />
-          <entry key="Makefile" value="25" />
+          <entry key="Makefile" value="26" />
           <entry key="gitignore" value="7" />
           <entry key="gitmodules" value="1" />
-          <entry key="go" value="76" />
-          <entry key="golden" value="1" />
+          <entry key="go" value="88" />
+          <entry key="golden" value="2" />
           <entry key="ini" value="1" />
           <entry key="json" value="6" />
-          <entry key="lock" value="1" />
+          <entry key="lock" value="2" />
           <entry key="md" value="14" />
-          <entry key="mod" value="8" />
-          <entry key="proto" value="16" />
+          <entry key="mod" value="9" />
+          <entry key="proto" value="17" />
           <entry key="py" value="2" />
           <entry key="sh" value="11" />
           <entry key="sum" value="2" />
           <entry key="tmpl" value="19" />
-          <entry key="toml" value="3" />
+          <entry key="toml" value="4" />
           <entry key="txt" value="6" />
           <entry key="yaml" value="15" />
           <entry key="yml" value="2" />
@@ -53,15 +592,15 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bash" value="11" />
-          <entry key="DTD" value="8" />
+          <entry key="DTD" value="9" />
           <entry key="Dockerfile" value="8" />
           <entry key="Git file" value="3" />
-          <entry key="Go" value="70" />
+          <entry key="Go" value="82" />
           <entry key="JSON" value="6" />
-          <entry key="Makefile" value="25" />
+          <entry key="Makefile" value="26" />
           <entry key="Markdown" value="14" />
-          <entry key="PLAIN_TEXT" value="46" />
-          <entry key="PROTO" value="16" />
+          <entry key="PLAIN_TEXT" value="49" />
+          <entry key="PROTO" value="17" />
           <entry key="Python" value="1" />
           <entry key="YAML" value="17" />
         </counts>
@@ -70,13 +609,13 @@
         <counts>
           <entry key="Dockerfile" value="273" />
           <entry key="LICENSE" value="12" />
-          <entry key="Makefile" value="1722" />
+          <entry key="Makefile" value="1769" />
           <entry key="gitignore" value="39" />
-          <entry key="go" value="1690" />
+          <entry key="go" value="1907" />
           <entry key="json" value="560" />
           <entry key="md" value="335" />
           <entry key="mod" value="27" />
-          <entry key="proto" value="163" />
+          <entry key="proto" value="179" />
           <entry key="py" value="341" />
           <entry key="sh" value="54" />
           <entry key="tmpl" value="44" />
@@ -88,12 +627,12 @@
           <entry key="Bash" value="54" />
           <entry key="DTD" value="27" />
           <entry key="Dockerfile" value="273" />
-          <entry key="Go" value="1690" />
+          <entry key="Go" value="1907" />
           <entry key="JSON" value="560" />
-          <entry key="Makefile" value="1722" />
+          <entry key="Makefile" value="1769" />
           <entry key="Markdown" value="335" />
           <entry key="PLAIN_TEXT" value="95" />
-          <entry key="PROTO" value="163" />
+          <entry key="PROTO" value="179" />
           <entry key="Python" value="341" />
           <entry key="YAML" value="179" />
         </counts>
@@ -102,70 +641,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+            <state relative-caret-position="181">
+              <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/link.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="90">
+              <caret line="6" column="46" selection-start-line="6" selection-end-line="7" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hack/gogoproto/doc.go">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hack/gogoproto/Makefile">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hack/gogoproto/helper.go">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hack/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-26">
-              <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hack/gogoproto/gogo.pb.go">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hack/gogoproto/gogo.proto">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hack/gogoproto/gogo.pb.golden">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -228,13 +719,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/transports/http/http.go.tmpl" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/transports/grpc/grpc.go.tmpl" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates/{{.File.Package}}/gen/client/grpc/client.go.tmpl" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/gen.go" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/account.proto" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/account_service.proto" />
-        <option value="$PROJECT_DIR$/example/go.mod" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/prototool.yaml" />
         <option value="$PROJECT_DIR$/example/services/prototool.yaml" />
         <option value="$PROJECT_DIR$/example/gen/user/client/grpc/client.go" />
@@ -278,7 +762,14 @@
         <option value="$PROJECT_DIR$/hack/all/entrypoint.sh" />
         <option value="$PROJECT_DIR$/hack/Dockerfile" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/cobracli/main.go" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gotmpl/main.go" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/slick/main.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gotmpl/helpers.go" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/helpers/helpers.go" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gotmpl/encode.go" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/link.go" />
       </list>
     </option>
   </component>
@@ -329,31 +820,12 @@
             <path>
               <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
               <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="hack" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
               <item name="hooks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
               <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
               <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -405,6 +877,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="23" width="1680" height="951" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27106228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -442,6 +915,8 @@
       <path value="$PROJECT_DIR$/{{cookiecutter.app_name}}/templates" />
       <path value="$PROJECT_DIR$/example/templates" />
       <path value="$PROJECT_DIR$/googleapis" />
+      <path value="$PROJECT_DIR$/grpclab" />
+      <path value="$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/protobuf" />
     </ignored-roots>
   </component>
   <component name="VgoProject">
@@ -449,61 +924,6 @@
     <proxy>direct</proxy>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/temp/prototool.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-212">
-          <caret line="73" column="90" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="73" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/go.mod" />
-    <entry file="file://$PROJECT_DIR$/hooks/post_gen_project.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitmodules">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grpclab/services/user/user.proto" />
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/service.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grpclab/services/prototool.yaml" />
-    <entry file="file://$PROJECT_DIR$/grpclab/gen/user/client/grpc/client.go" />
-    <entry file="file://$PROJECT_DIR$/grpclab/gen/user/helpers/helpers.txt" />
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/version/version.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/AUTHORS.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Gopkg.lock" />
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Gopkg.toml" />
-    <entry file="file://$PROJECT_DIR$/cookiecutter.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hack/all/test/test.proto">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hack/all/test/include.proto">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/hack/all/test.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -523,7 +943,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/grpclab/Makefile" />
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/yaml.v2/go.mod" />
     <entry file="file://$PROJECT_DIR$/config.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -652,7 +1071,7 @@
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -663,17 +1082,126 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gogoproto/gogo.pb.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/protoc-gen-gofast/main.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state relative-caret-position="90">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/protoc-gen-combo/combo.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="61" column="20" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gogoproto/gogo.pb.golden">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-232" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/protoc-gen-gogoslick/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/protoc-gen-gogofaster/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-314" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gogoproto/gogo.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1717">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/slick/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gotmpl/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2205">
+          <caret line="147" column="1" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
+          <folding>
+            <element signature="e#14#346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/cobracli/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-194">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="e#14#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Gopkg.toml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Gopkg.lock">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+        <state relative-caret-position="181">
+          <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/yaml.v2/go.mod">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gotmpl/helpers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16935">
+          <caret line="1129" column="1" selection-start-line="1129" selection-start-column="1" selection-end-line="1129" selection-end-column="1" />
+          <folding>
+            <element signature="e#14#414#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/helpers/helpers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16935">
+          <caret line="1129" column="1" selection-start-line="1129" selection-start-column="1" selection-end-line="1129" selection-end-column="1" />
+          <folding>
+            <element signature="e#17#417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gotmpl/encode.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/link.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="46" selection-start-line="6" selection-end-line="7" />
         </state>
       </provider>
     </entry>
