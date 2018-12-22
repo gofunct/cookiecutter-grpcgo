@@ -1,6 +1,11 @@
 protoc:
   version: 3.6.1
 
+create:
+  packages:
+  - directory: .
+    name: {{cookiecutter.app_name}}
+
 generate:
   go_options:
     import_path: "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"

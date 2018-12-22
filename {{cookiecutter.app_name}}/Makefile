@@ -1,6 +1,8 @@
 .PHONY: build build-alpine clean test help default vendor init gen deps
 PROTO = $(wildcard services/*/*.proto)
+
 PBGO = $(PROTO:proto/%.proto=gen/go/%.pb.go)
+
 SOURCES :=	$(shell find . -name "*.proto" -not -path ./vendor/\*)
 TARGETS_TMPL :=	$(foreach source, $(SOURCES), $(source)_tmpl)
 VERSION := $(shell grep "const Version " version/version.go | sed -E 's/.*"(.+)"$$/\1/')
@@ -18,9 +20,10 @@ default: test
 init: vendor gen $(TARGETS_TMPL)
 	go install
 
-gen:
+create:
 	mkdir -p services/$(dir $(PROTO))
-	docker run -v `pwd`:/defs colemanword/prototool:1.17_0 all $(PROTO)
+	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 create $(PROTO)
+	cat proto/$(PROTO)
 
 $(TARGETS_TMPL): %_tmpl:
 	git clone -q https://github.com/gofunct/templates.git
@@ -31,6 +34,8 @@ build: setup vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
 	@echo "building ${BIN_NAME} ${VERSION}"
 	@echo "GOPATH=${GOPATH}"
 	go build -ldflags "-X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
+
+sources: $(SOURCES)
 
 vendor: ## Runs go mod vendor, mostly used for ci.
 	go mod vendor
