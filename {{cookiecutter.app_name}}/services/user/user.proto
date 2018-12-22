@@ -1,34 +1,85 @@
 syntax = "proto3";
 
+package user;
+
 option go_package = "userpb";
 option java_multiple_files = true;
 option java_outer_classname = "UserProto";
 option java_package = "com.user";
-
-package user;
-
-service UserService {
-  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
-  rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
-}
-
-message CreateUserRequest {
-  string name = 1;
-}
-message CreateUserResponse {
-  User user = 1;
-  string err_msg = 2;
-}
-
-message GetUserRequest {
-  string id = 1;
-}
-message GetUserResponse {
-  User user = 1;
-  string err_msg = 2;
-}
+import "google/protobuf/empty.proto";
 
 message User {
   string id = 1;
   string name = 2;
+  string email = 3;
+  string confirm_token = 4;
+  string password_reset_token = 5;
+  map<string, string> metadata = 6;
 }
+
+message ListUsersRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+}
+
+message ListUsersResponse {
+  repeated User users = 1;
+  string next_page_token = 2;
+}
+
+message GetByIdRequest {
+  string id = 1;
+}
+
+message GetByEmailRequest {
+  string email = 1;
+}
+
+message AuthenticateByEmailRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message GeneratePasswordTokenRequest {
+  string email = 1;
+}
+
+message GeneratePasswordTokenResponse {
+  string token = 1;
+}
+
+message ResetPasswordRequest {
+  string token = 1;
+  string password = 2;
+}
+
+message ConfirmUserRequest {
+  string token = 1;
+}
+
+message CreateUserRequest {
+  User account = 1;
+  string password = 2;
+}
+
+message UpdateUserRequest {
+  string id = 1;
+  string password = 2;
+  User account = 3;
+}
+
+message DeleteUserRequest {
+  string id = 1;
+}
+
+service UserService {
+  rpc List (ListUsersRequest) returns (ListUsersResponse) {}
+  rpc GetById (GetByIdRequest) returns (User) {}
+  rpc GetByEmail (GetByEmailRequest) returns (User) {}
+  rpc AuthenticateByEmail (AuthenticateByEmailRequest) returns (User) {}
+  rpc GeneratePasswordToken (GeneratePasswordTokenRequest) returns (GeneratePasswordTokenResponse) {}
+  rpc ResetPassword (ResetPasswordRequest) returns (User) {}
+  rpc ConfirmUser (ConfirmUserRequest) returns (User) {}
+  rpc Create (CreateUserRequest) returns (User) {}
+  rpc Update (UpdateUserRequest) returns (User) {}
+  rpc Delete (DeleteUserRequest) returns (google.protobuf.Empty) {}

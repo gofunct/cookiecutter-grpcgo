@@ -32,3 +32,5 @@ fabric.properties
 *.dylib
 *.test
 *.out
+/grpclab/services/user/service.go
+/{{cookiecutter.app_name}}/services/user/service.go
