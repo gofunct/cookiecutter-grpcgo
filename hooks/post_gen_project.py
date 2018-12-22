@@ -30,4 +30,8 @@ if '{{ cookiecutter.use_tls }}'.lower() != 'y':
 if '{{ cookiecutter.use_ci}}'.lower() != 'circle':
     remove_dir(".circleci/")
 
+if '{{ cookiecutter.use_go_mod}}'.lower() != 'y':
+    remove_file("go.mod")
+    remove_file("go.sum")
+
     init = subprocess.Popen("make init", shell=True, stderr=subprocess.STDOUT)

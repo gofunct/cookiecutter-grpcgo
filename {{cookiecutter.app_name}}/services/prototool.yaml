@@ -1,20 +1,9 @@
 protoc:
   version: 3.6.1
 
-includes:
-  - /usr/local/bin
-  - /usr/local/include
-
-allow_unused_imports: true
-
 generate:
   go_options:
-    import_path: "services"
-    extra_modifiers:
-      google/api/annotations.proto: google.golang.org/genproto/googleapis/api/annotations
-      google/api/http.proto: google.golang.org/genproto/googleapis/api/annotations
-      protoc-gen-swagger/options/annotations.proto: github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger/options
-
+    import_path: github.com/gofunct/user
   plugins:
   - name: gogoslick
     type: gogo

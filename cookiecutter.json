@@ -14,5 +14,6 @@
     "json_logs": "y",
     "use_docker": "y",
     "use_tls": "y",
+    "use_go_mod": "y",
     "use_ci": ["circle", "none"]
 }

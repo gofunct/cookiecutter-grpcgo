@@ -1,52 +1,4 @@
-# A Makefile is a collection of rules.  Each rule is a recipe to do a specific
-# thing, sort of like a grunt task or an npm package.json script.
-#
-# A rule looks like this:
-#
-# <target>: <prerequisites...>
-# 	<commands>
-#
-# The "target" is required.  The prerequisites are optional, and the commands
-# are also optional, but you have to have one or the other.
-#
-# To suppress output, add @ signs before each line
-#
-#
-# Within the ruleset, we can use some special syntax to refer to the input
-# file and the output file.  Here are the special variables:
-#
-# $@  The file that is being made right now by this rule (aka the "target")
-#     You can remember this because it's like the "$@" list in a
-#     shell script.  @ is like a letter "a" for "arguments.
-#     When you type "make foo", then "foo" is the argument.
-#
-# $<  The input file (that is, the first prerequisite in the list)
-#     You can remember this becasue the < is like a file input
-#     pipe in bash.  `head <foo.txt` is using the contents of
-#     foo.txt as the input.  Also the < points INto the $
-#
-# $^  This is the list of ALL input files, not just the first one.
-#     You can remember it because it's like $<, but turned up a notch.
-#     If a file shows up more than once in the input list for some reason,
-#     it's still only going to show one time in $^.
-#
-# $?  All the input files that are newer than the target
-#     It's like a question. "Wait, why are you doing this?  What
-#     files changed to make this necessary?"
-#
-# $$  A literal $ character inside of the rules section
-#
-# $*  The "stem" part that matched in the rule definition's % bit
-#     You can remember this because in make rules, % is like * on
-#     the shell, so $* is telling you what matched the pattern..
-
-IMAGE_NAME := "{{cookiecutter.docker_hub_username}}/{{cookiecutter.app_name}}"
-PROJECT_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}"
-SERVICE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"
-BIN_NAME={{cookiecutter.app_name}}
-
-
-.PHONY: build build-alpine clean test help default vendor init gen deps
+.PHONY: build build-alpine clean test help default vendor init prototool deps
 
 SOURCES :=	$(shell find . -name "*.proto" -not -path ./vendor/\*)
 TARGETS_TMPL :=	$(foreach source, $(SOURCES), $(source)_tmpl)
@@ -54,26 +6,33 @@ VERSION := $(shell grep "const Version " version/version.go | sed -E 's/.*"(.+)"
 GIT_COMMIT=$(shell git rev-parse HEAD)
 GIT_DIRTY=$(shell test -n "`git status --porcelain`" && echo "+CHANGES" || true)
 BUILD_DATE=$(shell date '+%Y-%m-%d-%H:%M:%S')
-
+IMAGE_NAME := "{{cookiecutter.docker_hub_username}}/{{cookiecutter.app_name}}"
+PROJECT_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}"
+SERVICE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"
+BIN_NAME={{cookiecutter.app_name}}
 service_name =	$(word 2,$(subst /, ,$1))
 
 default: test
 
-init: gen $(TARGETS_TMPL) ## Initialize project
-	dep ensure
+init: deps prototool $(TARGETS_TMPL)
+	go mod vendor
 	go install
+	{{cookiecutter.app_name}} serve
 
-gen: ## Generate protobuf stubs in services directory
-	dep ensure
-	go get github.com/gogo/protobuf/protoc-gen-gogoslick
-	go get github.com/gofunct/proto-generator/proto_ext/cobracli
-	go get github.com/gofunct/proto-generator/proto_ext/gotmpl
-	go get github.com/gofunct/proto-generator/proto_ext/slick
-	go get github.com/gogo/protobuf/gogoproto
-	docker run -v `pwd`:/defs colemanword/protoc:1.17_0 -d services -l go
+deps: ## download dependencies and tls certificates
+	go mod vendor
+	brew install protobuf
+	brew install prototool
+	go get -u \
+		google.golang.org/grpc \
+		github.com/golang/protobuf/protoc-gen-go \
+		github.com/ckaznocha/protoc-gen-lint \
+		github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc \
+		moul.io/protoc-gen-gotemplate \
+		github.com/gogo/protobuf/...
 
-protofiles: ## List protobuf files
-	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 files ./services
+prototool:
+	prototool all services
 
 $(TARGETS_TMPL): %_tmpl:
 	git clone -q https://github.com/gofunct/templates.git
