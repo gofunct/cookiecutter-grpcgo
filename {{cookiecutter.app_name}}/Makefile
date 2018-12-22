@@ -1,4 +1,4 @@
-.PHONY: build build-alpine clean test help default vendor init prototool deps
+.PHONY: build build-alpine clean test help default vendor init gen deps
 
 SOURCES :=	$(shell find . -name "*.proto" -not -path ./vendor/\*)
 TARGETS_TMPL :=	$(foreach source, $(SOURCES), $(source)_tmpl)
@@ -14,7 +14,7 @@ service_name =	$(word 2,$(subst /, ,$1))
 
 default: test
 
-init: deps prototool $(TARGETS_TMPL)
+init: deps gen $(TARGETS_TMPL)
 	dep ensure
 	go install
 
@@ -29,11 +29,12 @@ deps: ## download dependencies and tls certificates
 		github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc \
 		moul.io/protoc-gen-gotemplate \
 		google.golang.org/genproto/googleapis/api/annotations\... \
-		github.com/gogo/protobuf/...
+		github.com/gogo/protobuf/protoc-gen-gogo
+
 		dep ensure
 
-prototool:
-	prototool all services
+gen:
+	cd services; docker run -v `pwd`:/defs colemanword/prototool:1.17_0 all services
 
 $(TARGETS_TMPL): %_tmpl:
 	git clone -q https://github.com/gofunct/templates.git
