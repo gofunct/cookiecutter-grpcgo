@@ -8,11 +8,10 @@ Powered by [Cookiecutter](https://github.com/audreyr/cookiecutter), Cookiecutter
 - [x] Dockerfile
 - [ ] Docker-compose (prometheus, jaeger)
 - [x] build time and git hash at build time
-- [x] .gitignore
 - [x] README.md
 - [ ] Prototool config
 - [x] Cobra cli
-- [x] Viper config
+- [ ] Viper config
 - [ ] Starter proto file
 - [ ] Gokit http server
 - [ ] Gokit grpc server
