@@ -64,10 +64,10 @@ init: gen $(TARGETS_TMPL)
 	go install
 
 gen:
-	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 all /defs/{{cookiecutter.app_name}}/services
+	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 all ./services
 
 protofiles:
-	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 files /defs/{{cookiecutter.app_name}}/services
+	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 files ./services
 
 $(TARGETS_TMPL): %_tmpl:
 	git clone -q https://github.com/gofunct/templates.git
