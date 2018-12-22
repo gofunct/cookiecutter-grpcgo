@@ -4,6 +4,9 @@ protoc:
 generate:
   go_options:
     import_path: github.com/gofunct/user
+    extra_modifiers:
+      google/api/annotations.proto: google.golang.org/genproto/googleapis/api/annotations
+
   plugins:
   - name: gogoslick
     type: gogo

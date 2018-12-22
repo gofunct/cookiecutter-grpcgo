@@ -31,9 +31,22 @@ type Database interface {
 	Close() error
 }
 
+message Account {
+string uuid = 1  [(gogoproto.moretags) = "db:\"uuid\""];
+string name = 2 [(gogoproto.moretags) = "db:\"name\""];
+string email = 3 [(gogoproto.moretags) = "db:\"email\""];
+bool confirmed_and_active = 4 [(gogoproto.moretags) = "db:\"confirmed_and_active\""];
+google.protobuf.Timestamp member_since = 5 [(gogoproto.moretags) = "db:\"member_since\"", (gogoproto.stdtime) = true, (gogoproto.nullable) = false]; // API format becomes RFC 3339
+bool support = 6 [(gogoproto.moretags) = "db:\"support\""];
+string phonenumber = 7 [(gogoproto.moretags) = "db:\"phonenumber\""];
+string photo_url = 8 [(gogoproto.moretags) = "db:\"photo_url\""];
+string password = 9 [(gogoproto.moretags) = "db:\"password\""];
+}
+
+
 type Account struct {
-	ID                 string `db:"id"`
-	Name               string `validate:"required"`
+	UUID               string `db:"uuid"`
+	Name               string `db:"name"`
 	Email              string `validate:"required"`
 	HashedPassword     string `db:"hashed_password"`
 	ConfirmationToken  string

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7087faca-059b-4773-b2ee-4cb389a586fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/db.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,9 +29,9 @@
         <counts>
           <entry key="Dockerfile" value="4" />
           <entry key="LICENSE" value="1" />
-          <entry key="Makefile" value="16" />
+          <entry key="Makefile" value="17" />
           <entry key="gitignore" value="7" />
-          <entry key="go" value="68" />
+          <entry key="go" value="69" />
           <entry key="ini" value="1" />
           <entry key="json" value="4" />
           <entry key="md" value="8" />
@@ -40,7 +43,7 @@
           <entry key="tmpl" value="19" />
           <entry key="toml" value="1" />
           <entry key="txt" value="5" />
-          <entry key="yaml" value="7" />
+          <entry key="yaml" value="9" />
           <entry key="yml" value="2" />
         </counts>
       </usages-collector>
@@ -50,43 +53,43 @@
           <entry key="DTD" value="5" />
           <entry key="Dockerfile" value="4" />
           <entry key="Git file" value="3" />
-          <entry key="Go" value="62" />
+          <entry key="Go" value="63" />
           <entry key="JSON" value="4" />
-          <entry key="Makefile" value="16" />
+          <entry key="Makefile" value="17" />
           <entry key="Markdown" value="8" />
           <entry key="PLAIN_TEXT" value="40" />
           <entry key="PROTO" value="8" />
-          <entry key="YAML" value="9" />
+          <entry key="YAML" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="30" />
           <entry key="LICENSE" value="12" />
-          <entry key="Makefile" value="1270" />
+          <entry key="Makefile" value="1273" />
           <entry key="gitignore" value="39" />
-          <entry key="go" value="1600" />
+          <entry key="go" value="1690" />
           <entry key="json" value="560" />
           <entry key="md" value="335" />
           <entry key="mod" value="27" />
           <entry key="proto" value="148" />
           <entry key="py" value="341" />
           <entry key="tmpl" value="44" />
-          <entry key="yaml" value="111" />
+          <entry key="yaml" value="116" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="DTD" value="27" />
           <entry key="Dockerfile" value="30" />
-          <entry key="Go" value="1600" />
+          <entry key="Go" value="1690" />
           <entry key="JSON" value="560" />
-          <entry key="Makefile" value="1270" />
+          <entry key="Makefile" value="1273" />
           <entry key="Markdown" value="335" />
           <entry key="PLAIN_TEXT" value="95" />
           <entry key="PROTO" value="148" />
           <entry key="Python" value="341" />
-          <entry key="YAML" value="111" />
+          <entry key="YAML" value="116" />
         </counts>
       </usages-collector>
     </session>
@@ -111,11 +114,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-811">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+            <state relative-caret-position="153">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/store/db.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="43" column="1" selection-start-line="33" selection-end-line="43" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -141,8 +171,9 @@
       <find>ErrUserNotFound</find>
       <find>Database</find>
       <find>Service</find>
-      <find>Account</find>
       <find>User</find>
+      <find>accounts</find>
+      <find>Account</find>
     </findStrings>
     <replaceStrings>
       <replace>github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}</replace>
@@ -153,8 +184,8 @@
       <replace>ErrUserStoreNotFound</replace>
       <replace>Store</replace>
       <replace>UserService</replace>
-      <replace>User</replace>
       <replace>Account</replace>
+      <replace>User</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/user/gen</dir>
@@ -191,7 +222,6 @@
         <option value="$PROJECT_DIR$/example/cmd/serve.go" />
         <option value="$PROJECT_DIR$/example/Makefile" />
         <option value="$PROJECT_DIR$/user/services/prototool.yaml" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml" />
         <option value="$PROJECT_DIR$/user/gen/user/endpoints/endpoints.go" />
         <option value="$PROJECT_DIR$/user/gen/user/transports/grpc/grpc.go" />
         <option value="$PROJECT_DIR$/user/gen/user/transports/http/http.go" />
@@ -202,14 +232,12 @@
         <option value="$PROJECT_DIR$/cookiecutter.json" />
         <option value="$PROJECT_DIR$/user/Makefile" />
         <option value="$PROJECT_DIR$/hooks/post_gen_project.py" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/grpclab/cmd/root.go" />
         <option value="$PROJECT_DIR$/grpclab/cmd/serve.go" />
         <option value="$PROJECT_DIR$/grpclab/gen/user/server/server.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/service.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/cmd/serve.go" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/db.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/store.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/token.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/go.mod" />
@@ -220,7 +248,10 @@
         <option value="$PROJECT_DIR$/grpclab/services/user/user.proto" />
         <option value="$PROJECT_DIR$/grpclab/services/user/service.go" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/db.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml" />
       </list>
     </option>
   </component>
@@ -290,6 +321,11 @@
             <path>
               <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
               <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
+              <item name="temp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
               <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -297,13 +333,6 @@
               <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
               <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -354,8 +383,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1680" height="947" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26800978" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26800978" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -368,7 +398,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32932693" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32932693" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -397,7 +427,6 @@
     <proxy>direct</proxy>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/example/cmd/serve.go" />
     <entry file="file://$PROJECT_DIR$/example/gen/user/client/grpc/client.go" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -418,13 +447,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example/Makefile" />
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/gen/user/endpoints/endpoints.go" />
     <entry file="file://$PROJECT_DIR$/user/gen/user/transports/grpc/grpc.go" />
     <entry file="file://$PROJECT_DIR$/user/gen/user/transports/http/http.go" />
@@ -443,13 +465,6 @@
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -579,13 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/store/db.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grpclab/store/env.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -647,10 +655,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/store/db.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="43" column="1" selection-start-line="33" selection-end-line="43" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-811">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="153">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/prototool.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-212">
+          <caret line="73" column="90" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="73" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="37" />
         </state>
       </provider>
     </entry>
