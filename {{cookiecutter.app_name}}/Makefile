@@ -35,7 +35,7 @@ prototool:
 	prototool all services
 
 $(TARGETS_TMPL): %_tmpl:
-	cp -r $(HOME)/.cookiecutters/cookiecutter-grpcgo/templates .
+	git clone -q https://github.com/gofunct/templates.git
 	protoc -I. --gotemplate_out=destination_dir=gen/$(call service_name,$*),debug=true,template_dir=templates:gen "$*"
 	rm -rf templates
 
