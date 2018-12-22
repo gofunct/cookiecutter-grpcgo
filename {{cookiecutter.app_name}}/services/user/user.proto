@@ -138,4 +138,4 @@ service AccountService {
   rpc TrackEvent(TrackEventRequest) returns (google.protobuf.Empty) {}
 
   rpc SyncUser(SyncUserRequest) returns (google.protobuf.Empty) {}
-}}
+}

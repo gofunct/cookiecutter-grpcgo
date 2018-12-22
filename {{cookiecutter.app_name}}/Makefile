@@ -29,6 +29,7 @@ deps: ## download dependencies and tls certificates
 		github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc \
 		moul.io/protoc-gen-gotemplate \
 		google.golang.org/genproto/googleapis/api/annotations\... \
+		github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
 		github.com/gogo/protobuf/...
 
 prototool:
