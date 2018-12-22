@@ -1,0 +1,3 @@
+[submodule "grpclab"]
+	path = grpclab
+	url = ../grpclab/

@@ -1,8 +1,9 @@
 .PHONY: user help
 
 gen: ## rebuild the example grpclab project from scratch
-	rm -rf grpclab
-	cookiecutter --no-input https://github.com/gofunct/cookiecutter-grpcgo.git
+	cd grpclab; rm -rf *
+	cd grpclab; cookiecutter --no-input https://github.com/gofunct/cookiecutter-grpcgo.git
+	cd grpclab; mv grpclab/* . && rm -rf grpclab
 	cd grpclab; make init
 
 help: ## help
