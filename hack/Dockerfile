@@ -71,7 +71,7 @@ COPY --from=build /usr/local/include/google/ /usr/local/include/google
 COPY --from=build /usr/local/bin/prototool /usr/local/bin/prototool
 COPY --from=build /go/bin/* /usr/local/bin/
 COPY --from=build /tmp/grpc_web_plugin /usr/local/bin/grpc_web_plugin
-COPY --from=build /go/src/github.com/gogo/protobuf/gogoproto/gogo.proto /usr/local/include/gogo.proto
+COPY --from=build /go/src/github.com/gogo/protobuf/* /go/src/github.com/gogo/protobuf/
 COPY --from=build /go/src/github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger/options/ /usr/local/include/protoc-gen-swagger/options/
 
 ADD all/entrypoint.sh /usr/local/bin
@@ -82,7 +82,7 @@ ENTRYPOINT [ "entrypoint.sh" ]
 
 # protoc
 FROM protoc-all AS protoc
-ENTRYPOINT [ "protoc", "-I/usr/local/include" ]
+ENTRYPOINT [ "protoc", "-I/usr/local/include", "-I/go/src/github.com/gogo/protobuf/protobuf" ]
 
 # prototool
 FROM protoc-all AS prototool
@@ -106,3 +106,7 @@ RUN chmod +x /usr/local/bin/generate_gateway.sh
 
 WORKDIR /defs
 ENTRYPOINT [ "generate_gateway.sh" ]
+
+# prototool
+FROM protoc-all AS inspect
+CMD [ "bash" ]

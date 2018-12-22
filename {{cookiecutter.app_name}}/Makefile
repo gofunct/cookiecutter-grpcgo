@@ -54,7 +54,6 @@ VERSION := $(shell grep "const Version " version/version.go | sed -E 's/.*"(.+)"
 GIT_COMMIT=$(shell git rev-parse HEAD)
 GIT_DIRTY=$(shell test -n "`git status --porcelain`" && echo "+CHANGES" || true)
 BUILD_DATE=$(shell date '+%Y-%m-%d-%H:%M:%S')
-MODULES=$(shell export GOMODULES=on)
 
 service_name =	$(word 2,$(subst /, ,$1))
 
@@ -62,7 +61,6 @@ default: test
 
 init: gen $(TARGETS_TMPL) ## Initialize project
 	dep ensure
-	go install proto_ext/...
 	go install
 
 gen: ## Generate protobuf stubs in services directory
@@ -72,7 +70,7 @@ gen: ## Generate protobuf stubs in services directory
 	go get github.com/gofunct/proto-generator/proto_ext/gotmpl
 	go get github.com/gofunct/proto-generator/proto_ext/slick
 	go get github.com/gogo/protobuf/gogoproto
-	docker run -v `pwd`:/defs colemanword/protoc-all:1.17_0 -d services -l go
+	docker run -v `pwd`:/defs colemanword/protoc:1.17_0 -d services -l go
 
 protofiles: ## List protobuf files
 	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 files ./services

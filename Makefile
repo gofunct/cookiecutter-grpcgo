@@ -17,5 +17,8 @@ debug: ## rebuild the example grpclab project from scratch
 build-docker:
 	cd hack; make build
 
+inspect-docker:
+	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 files ./services
+
 help: ## help
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST) | sort

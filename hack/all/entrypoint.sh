@@ -19,15 +19,15 @@ printUsage() {
 }
 
 
-GEN_GATEWAY=true
+GEN_GATEWAY=false
 GEN_DOCS=true
 DOCS_FORMAT="html,index.html"
 LINT=false
 LINT_CHECKS=""
 SUPPORTED_LANGUAGES=("go" "ruby" "csharp" "java" "python" "objc" "gogo" "php" "node" "web")
-EXTRA_INCLUDES=""
+EXTRA_INCLUDES="/go/src/github.com/gogo/protobuf/protobuf/"
 OUT_DIR="."
-GO_SOURCE_RELATIVE="paths=source_relative,"
+GO_SOURCE_RELATIVE=""
 
 while test $# -gt 0; do
     case "$1" in

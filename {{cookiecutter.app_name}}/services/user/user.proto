@@ -6,7 +6,7 @@ option java_outer_classname = "UserProto";
 option java_package = "com.user";
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
-import "github.com/gofunct/proto-generator/proto_ext/gogoproto/gogo.proto";
+import "/go/src/github.com/gogo/protobuf/gogoproto/gogo.proto";
 
 package user;
 
