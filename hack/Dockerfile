@@ -43,7 +43,8 @@ RUN go get -u github.com/golang/protobuf/protoc-gen-go
 
 RUN go get -u github.com/gogo/protobuf/protoc-gen-gogo
 RUN go get -u github.com/gogo/protobuf/protoc-gen-gogofast
-
+RUN go get -u github.com/gogo/protobuf/protoc-gen-gogoslick
+RUN go get -u github.com/gogo/protobuf/gogoproto
 RUN go get -u github.com/ckaznocha/protoc-gen-lint
 RUN go get -u github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc
 
@@ -70,9 +71,9 @@ COPY --from=build /usr/local/include/google/ /usr/local/include/google
 COPY --from=build /usr/local/bin/prototool /usr/local/bin/prototool
 COPY --from=build /go/bin/* /usr/local/bin/
 COPY --from=build /tmp/grpc_web_plugin /usr/local/bin/grpc_web_plugin
-
+COPY --from=build /go/src/github.com/gogo/protobuf/gogoproto/gogo.proto /usr/local/include/gogo.proto
 COPY --from=build /go/src/github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger/options/ /usr/local/include/protoc-gen-swagger/options/
-COPY gogoproto /defs/github.com/gogo/protobuf/gogoproto/gogo.proto
+
 ADD all/entrypoint.sh /usr/local/bin
 RUN chmod +x /usr/local/bin/entrypoint.sh
 

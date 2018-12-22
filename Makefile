@@ -1,11 +1,10 @@
 .PHONY: user help
-MODULES=$(shell export GOMODULES=on)
 
 gen: ## rebuild the example grpclab project from scratch
 	cd ../grpclab; rm -rf *
 	cd ../grpclab; cookiecutter --no-input -v https://github.com/gofunct/cookiecutter-grpcgo.git
 	cd ../grpclab; mv grpclab/* . && rm -rf grpclab
-	cd ../grpclab && export GOMODULES=on && make init
+	cd ../grpclab; make init
 	cd ../grpclab; git add -A && git commit -m "build" && git push origin master
 	grpclab serve
 
@@ -13,7 +12,7 @@ debug: ## rebuild the example grpclab project from scratch
 	cd ../grpclab; rm -rf *
 	cd ../grpclab; cookiecutter --no-input -v https://github.com/gofunct/cookiecutter-grpcgo.git
 	cd ../grpclab; mv grpclab/* . && rm -rf grpclab
-	cd ../grpclab && export GOMODULES=on && make protofiles
+	cd ../grpclab; make protofiles
 
 build-docker:
 	cd hack; make build
