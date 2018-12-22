@@ -71,6 +71,7 @@ gen:
 	go get github.com/gofunct/proto-generator/proto_ext/cobracli
 	go get github.com/gofunct/proto-generator/proto_ext/gotmpl
 	go get github.com/gofunct/proto-generator/proto_ext/slick
+	go get github.com/gogo/protobuf/gogoproto
 	docker run -v `pwd`:/defs colemanword/protoc-all:1.17_0 -d services -l go
 
 protofiles:
