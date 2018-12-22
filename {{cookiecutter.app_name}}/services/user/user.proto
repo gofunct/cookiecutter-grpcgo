@@ -6,7 +6,7 @@ option java_outer_classname = "UserProto";
 option java_package = "com.user";
 import "google/protobuf/empty.proto";
 
-package user_service;
+package user;
 
 
 message User {
