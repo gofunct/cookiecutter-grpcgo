@@ -31,7 +31,7 @@ deps: ## download dependencies and tls certificates
 		github.com/gogo/protobuf/...
 
 	go get -d google.golang.org/genproto/googleapis/api/annotations `#and 3 other pkgs` &&\
-        (cd /go/src/google.golang.org/genproto && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+        (cd vendor/google.golang.org/genproto && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
 
 prototool:
 	prototool all services
