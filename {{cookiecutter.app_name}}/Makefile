@@ -15,11 +15,10 @@ service_name =	$(word 2,$(subst /, ,$1))
 default: test
 
 init: deps prototool $(TARGETS_TMPL)
-	go mod vendor
+	dep ensure
 	go install
 
 deps: ## download dependencies and tls certificates
-	go mod vendor
 	brew install protobuf
 	brew install prototool
 	go get -u \
@@ -30,7 +29,7 @@ deps: ## download dependencies and tls certificates
 		moul.io/protoc-gen-gotemplate \
 		google.golang.org/genproto/googleapis/api/annotations\... \
 		github.com/gogo/protobuf/...
-		go mod vendor
+		dep ensure
 
 prototool:
 	prototool all services
@@ -46,7 +45,7 @@ build: setup vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
 	go build -ldflags "-X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
 
 vendor: ## Runs go mod vendor, mostly used for ci.
-	go mod vendor
+	dep ensure
 
 {% if cookiecutter.use_docker == "y" %}
 build-alpine: ## Compile optimized for alpine linux.

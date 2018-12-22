@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7087faca-059b-4773-b2ee-4cb389a586fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" afterDir="false" />
-    </list>
+    <list default="true" id="7087faca-059b-4773-b2ee-4cb389a586fa" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +67,7 @@
           <entry key="json" value="560" />
           <entry key="md" value="335" />
           <entry key="mod" value="27" />
-          <entry key="proto" value="153" />
+          <entry key="proto" value="161" />
           <entry key="py" value="341" />
           <entry key="tmpl" value="44" />
           <entry key="yaml" value="145" />
@@ -86,7 +82,7 @@
           <entry key="Makefile" value="1319" />
           <entry key="Markdown" value="335" />
           <entry key="PLAIN_TEXT" value="95" />
-          <entry key="PROTO" value="153" />
+          <entry key="PROTO" value="161" />
           <entry key="Python" value="341" />
           <entry key="YAML" value="145" />
         </counts>
@@ -116,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state relative-caret-position="-1279">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -134,8 +130,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="512">
+              <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -143,8 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="90">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -249,8 +245,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/db.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" />
       </list>
     </option>
   </component>
@@ -652,22 +648,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="90">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="-1279">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="512">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
         </state>
       </provider>
     </entry>
