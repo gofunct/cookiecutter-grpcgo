@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7087faca-059b-4773-b2ee-4cb389a586fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +63,7 @@
         <counts>
           <entry key="Dockerfile" value="30" />
           <entry key="LICENSE" value="12" />
-          <entry key="Makefile" value="1273" />
+          <entry key="Makefile" value="1282" />
           <entry key="gitignore" value="39" />
           <entry key="go" value="1690" />
           <entry key="json" value="560" />
@@ -84,7 +81,7 @@
           <entry key="Dockerfile" value="30" />
           <entry key="Go" value="1690" />
           <entry key="JSON" value="560" />
-          <entry key="Makefile" value="1273" />
+          <entry key="Makefile" value="1282" />
           <entry key="Markdown" value="335" />
           <entry key="PLAIN_TEXT" value="95" />
           <entry key="PROTO" value="148" />
@@ -135,8 +132,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="37" />
+            <state relative-caret-position="358">
+              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -144,8 +141,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="105">
+              <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -250,8 +247,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/db.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/user/user.proto" />
-        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" />
       </list>
     </option>
   </component>
@@ -321,6 +318,46 @@
             <path>
               <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
               <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
+              <item name="grpclab" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
+              <item name="grpclab" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="google.golang.org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
+              <item name="grpclab" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="google.golang.org" type="462c0819:PsiDirectoryNode" />
+              <item name="genproto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
+              <item name="grpclab" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="google.golang.org" type="462c0819:PsiDirectoryNode" />
+              <item name="genproto" type="462c0819:PsiDirectoryNode" />
+              <item name="googleapis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
+              <item name="grpclab" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="google.golang.org" type="462c0819:PsiDirectoryNode" />
+              <item name="genproto" type="462c0819:PsiDirectoryNode" />
+              <item name="googleapis" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
               <item name="temp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -383,9 +420,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1680" height="947" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26800978" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26800978" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -398,7 +434,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32932693" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32932693" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -669,13 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/temp/prototool.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-212">
@@ -683,10 +712,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/services/prototool.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="37" />
+        <state relative-caret-position="358">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
         </state>
       </provider>
     </entry>
