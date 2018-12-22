@@ -61,18 +61,13 @@ service_name =	$(word 2,$(subst /, ,$1))
 default: test
 
 init: vendor gen $(TARGETS_TMPL)
-	$(MODULES);go install
+	go install
 
 gen:
 	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 all /defs/{{cookiecutter.app_name}}/services
 
 protofiles:
 	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 files /defs/{{cookiecutter.app_name}}/services
-
-$(TARGETS_GO): %_go:
-	docker run -v $(PWD):/defs colemanword/prototool:1.17_0  "$*"
-	@mkdir -p services/$(call service_name,$*)/gen/pb
-	@mv ./services/$(call service_name,$*)/$(call service_name,$*).pb.go ./services/$(call service_name,$*)/gen/pb/pb.go
 
 $(TARGETS_TMPL): %_tmpl:
 	git clone -q https://github.com/gofunct/templates.git
