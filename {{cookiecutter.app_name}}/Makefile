@@ -16,7 +16,7 @@ default: test
 
 init: deps prototool $(TARGETS_TMPL)
 	go mod vendor
-	$(help)
+	go install
 
 deps: ## download dependencies and tls certificates
 	go mod vendor
