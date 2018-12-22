@@ -61,9 +61,11 @@ service_name =	$(word 2,$(subst /, ,$1))
 default: test
 
 init: gen $(TARGETS_TMPL)
+	go mod vendor
 	go install
 
 gen:
+	go mod vendor
 	docker run -v `pwd`:/defs colemanword/protoc-all:1.17_0 -d services -l go
 
 protofiles:
