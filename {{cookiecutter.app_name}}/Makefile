@@ -1,7 +1,46 @@
-.PHONY: build build-alpine clean test help default vendor init gen deps
-PROTO = $(wildcard services/*/*.proto)
+# A Makefile is a collection of rules.  Each rule is a recipe to do a specific
+# thing, sort of like a grunt task or an npm package.json script.
+#
+# A rule looks like this:
+#
+# <target>: <prerequisites...>
+# 	<commands>
+#
+# The "target" is required.  The prerequisites are optional, and the commands
+# are also optional, but you have to have one or the other.
+#
+# To suppress output, add @ signs before each line
+#
+#
+# Within the ruleset, we can use some special syntax to refer to the input
+# file and the output file.  Here are the special variables:
+#
+# $@  The file that is being made right now by this rule (aka the "target")
+#     You can remember this because it's like the "$@" list in a
+#     shell script.  @ is like a letter "a" for "arguments.
+#     When you type "make foo", then "foo" is the argument.
+#
+# $<  The input file (that is, the first prerequisite in the list)
+#     You can remember this becasue the < is like a file input
+#     pipe in bash.  `head <foo.txt` is using the contents of
+#     foo.txt as the input.  Also the < points INto the $
+#
+# $^  This is the list of ALL input files, not just the first one.
+#     You can remember it because it's like $<, but turned up a notch.
+#     If a file shows up more than once in the input list for some reason,
+#     it's still only going to show one time in $^.
+#
+# $?  All the input files that are newer than the target
+#     It's like a question. "Wait, why are you doing this?  What
+#     files changed to make this necessary?"
+#
+# $$  A literal $ character inside of the rules section
+#
+# $*  The "stem" part that matched in the rule definition's % bit
+#     You can remember this because in make rules, % is like * on
+#     the shell, so $* is telling you what matched the pattern..
 
-PBGO = $(PROTO:proto/%.proto=gen/go/%.pb.go)
+.PHONY: build build-alpine clean test help default vendor init gen deps
 
 SOURCES :=	$(shell find . -name "*.proto" -not -path ./vendor/\*)
 TARGETS_TMPL :=	$(foreach source, $(SOURCES), $(source)_tmpl)
@@ -20,10 +59,16 @@ default: test
 init: vendor gen $(TARGETS_TMPL)
 	go install
 
-create:
-	mkdir -p services/$(dir $(PROTO))
-	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 create $(PROTO)
-	cat proto/$(PROTO)
+gen:
+	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 all /defs/{{cookiecutter.app_name}}/services
+
+protofiles:
+	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 files /defs/{{cookiecutter.app_name}}/services
+
+$(TARGETS_GO): %_go:
+	docker run -v $(PWD):/defs colemanword/prototool:1.17_0  "$*"
+	@mkdir -p services/$(call service_name,$*)/gen/pb
+	@mv ./services/$(call service_name,$*)/$(call service_name,$*).pb.go ./services/$(call service_name,$*)/gen/pb/pb.go
 
 $(TARGETS_TMPL): %_tmpl:
 	git clone -q https://github.com/gofunct/templates.git
