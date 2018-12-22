@@ -73,13 +73,24 @@ message DeleteUserRequest {
 }
 
 service UserService {
-  rpc List (ListUsersRequest) returns (ListUsersResponse) {}
-  rpc GetById (GetByIdRequest) returns (User) {}
-  rpc GetByEmail (GetByEmailRequest) returns (User) {}
-  rpc AuthenticateByEmail (AuthenticateByEmailRequest) returns (User) {}
-  rpc GeneratePasswordToken (GeneratePasswordTokenRequest) returns (GeneratePasswordTokenResponse) {}
-  rpc ResetPassword (ResetPasswordRequest) returns (User) {}
-  rpc ConfirmUser (ConfirmUserRequest) returns (User) {}
-  rpc Create (CreateUserRequest) returns (User) {}
-  rpc Update (UpdateUserRequest) returns (User) {}
-  rpc Delete (DeleteUserRequest) returns (google.protobuf.Empty) {}
+  rpc List (ListUsersRequest) returns (ListUsersResponse) {
+  }
+  rpc GetById (GetByIdRequest) returns (User) {
+  }
+  rpc GetByEmail (GetByEmailRequest) returns (User) {
+  }
+  rpc AuthenticateByEmail (AuthenticateByEmailRequest) returns (User) {
+  }
+  rpc GeneratePasswordToken (GeneratePasswordTokenRequest) returns (GeneratePasswordTokenResponse) {
+  }
+  rpc ResetPassword (ResetPasswordRequest) returns (User) {
+  }
+  rpc ConfirmUser (ConfirmUserRequest) returns (User) {
+  }
+  rpc Create (CreateUserRequest) returns (User) {
+  }
+  rpc Update (UpdateUserRequest) returns (User) {
+  }
+  rpc Delete (DeleteUserRequest) returns (google.protobuf.Empty) {
+  }
+}
