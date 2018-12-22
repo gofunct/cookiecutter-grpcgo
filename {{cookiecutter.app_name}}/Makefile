@@ -1,5 +1,6 @@
 .PHONY: build build-alpine clean test help default vendor init gen deps
-
+PROTO = $(wildcard services/*/*.proto)
+PBGO = $(PROTO:proto/%.proto=gen/go/%.pb.go)
 SOURCES :=	$(shell find . -name "*.proto" -not -path ./vendor/\*)
 TARGETS_TMPL :=	$(foreach source, $(SOURCES), $(source)_tmpl)
 VERSION := $(shell grep "const Version " version/version.go | sed -E 's/.*"(.+)"$$/\1/')
@@ -18,7 +19,7 @@ init: vendor gen $(TARGETS_TMPL)
 	go install
 
 gen:
-	cd services; docker run -v `$(pwd)/services:/defs` colemanword/prototool:1.17_0 all
+	docker run -v `pwd`:/defs colemanword/prototool:1.17_0 create services/$(PROTO)
 
 $(TARGETS_TMPL): %_tmpl:
 	git clone -q https://github.com/gofunct/templates.git
