@@ -28,11 +28,8 @@ deps: ## download dependencies and tls certificates
 		github.com/ckaznocha/protoc-gen-lint \
 		github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc \
 		moul.io/protoc-gen-gotemplate \
+		google.golang.org/genproto/googleapis/api/annotations\... \
 		github.com/gogo/protobuf/...
-
-	go get -d google.golang.org/genproto/googleapis/api/annotations && \
-		go mod vendor && \
-        cd vendor/google.golang.org/genproto && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
 
 prototool:
 	prototool all services
