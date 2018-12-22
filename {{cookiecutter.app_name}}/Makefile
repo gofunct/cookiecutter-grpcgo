@@ -19,6 +19,7 @@ init: deps prototool $(TARGETS_TMPL)
 	go install
 
 deps: ## download dependencies and tls certificates
+	dep ensure
 	brew install protobuf
 	brew install prototool
 	go get -u \
