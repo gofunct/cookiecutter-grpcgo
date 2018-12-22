@@ -60,7 +60,7 @@ service_name =	$(word 2,$(subst /, ,$1))
 
 default: test
 
-init: vendor gen $(TARGETS_TMPL)
+init: gen $(TARGETS_TMPL)
 	go install
 
 gen:
