@@ -3,8 +3,6 @@ protoc:
 
 protoc_includes:
   - ../vendor/
-  - ../vendor/github.com/grpc-ecosystem/grpc-gateway
-  - ../vendor/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis
 
   protoc_include_wkt: true
 
