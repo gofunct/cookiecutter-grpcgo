@@ -60,12 +60,12 @@ service_name =	$(word 2,$(subst /, ,$1))
 
 default: test
 
-init: gen $(TARGETS_TMPL)
+init: gen $(TARGETS_TMPL) ## Initialize project
 	dep ensure
 	go install proto_ext/...
 	go install
 
-gen:
+gen: ## Generate protobuf stubs in services directory
 	dep ensure
 	go get github.com/gogo/protobuf/protoc-gen-gogoslick
 	go get github.com/gofunct/proto-generator/proto_ext/cobracli
@@ -74,7 +74,7 @@ gen:
 	go get github.com/gogo/protobuf/gogoproto
 	docker run -v `pwd`:/defs colemanword/protoc-all:1.17_0 -d services -l go
 
-protofiles:
+protofiles: ## List protobuf files
 	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 files ./services
 
 $(TARGETS_TMPL): %_tmpl:
@@ -86,8 +86,6 @@ build: setup vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
 	@echo "building ${BIN_NAME} ${VERSION}"
 	@echo "GOPATH=${GOPATH}"
 	go build -ldflags "-X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
-
-sources: $(SOURCES)
 
 vendor: ## Runs go mod vendor, mostly used for ci.
 	go mod vendor
