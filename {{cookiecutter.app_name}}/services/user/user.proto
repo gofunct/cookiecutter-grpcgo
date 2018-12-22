@@ -9,7 +9,7 @@ import "google/protobuf/empty.proto";
 package user_service;
 
 
-message Account {
+message User {
   string id = 1;
   string name = 2;
   string email = 3;
@@ -24,7 +24,7 @@ message ListUsersRequest {
 }
 
 message ListUsersResponse {
-  repeated Account users = 1;
+  repeated User users = 1;
   string next_page_token = 2;
 }
 
@@ -59,14 +59,14 @@ message ConfirmUserRequest {
 }
 
 message CreateUserRequest {
-  Account user = 1;
+  User user = 1;
   string password = 2;
 }
 
 message UpdateUserRequest {
   string id = 1;
   string password = 2;
-  Account user = 3;
+  User user = 3;
 }
 
 message DeleteUserRequest {
@@ -76,21 +76,19 @@ message DeleteUserRequest {
 service UserService {
   rpc List (ListUsersRequest) returns (ListUsersResponse) {
   }
-  rpc GetById (GetByIdRequest) returns (Account) {
+  rpc GetById (GetByIdRequest) returns (User) {
   }
-  rpc GetByEmail (GetByEmailRequest) returns (Account) {
+  rpc GetByEmail (GetByEmailRequest) returns (User) {
   }
-  rpc AuthenticateByEmail (AuthenticateByEmailRequest) returns (Account) {
+  rpc AuthenticateByEmail (AuthenticateByEmailRequest) returns (User) {
   }
   rpc GeneratePasswordToken (GeneratePasswordTokenRequest) returns (GeneratePasswordTokenResponse) {
   }
-  rpc ResetPassword (ResetPasswordRequest) returns (Account) {
+  rpc ConfirmUser (ConfirmUserRequest) returns (User) {
   }
-  rpc ConfirmUser (ConfirmUserRequest) returns (Account) {
+  rpc Create (CreateUserRequest) returns (User) {
   }
-  rpc Create (CreateUserRequest) returns (Account) {
-  }
-  rpc Update (UpdateUserRequest) returns (Account) {
+  rpc Update (UpdateUserRequest) returns (User) {
   }
   rpc Delete (DeleteUserRequest) returns (google.protobuf.Empty) {
   }
