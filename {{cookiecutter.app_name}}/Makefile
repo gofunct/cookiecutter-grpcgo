@@ -64,7 +64,7 @@ init: gen $(TARGETS_TMPL)
 	go install
 
 gen:
-	docker run -v `pwd`:/defs colemanword/protoc-all:1.17_0 -d services -l gogo
+	docker run -v `pwd`:/defs colemanword/protoc-all:1.17_0 -d services -l go
 
 protofiles:
 	docker run -v $(PWD):/defs colemanword/prototool:1.17_0 files ./services
