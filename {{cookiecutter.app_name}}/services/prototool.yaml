@@ -1,10 +1,15 @@
 protoc:
   version: 3.6.1
 
+includes:
+  - /usr/local/bin
+  - /usr/local/include
+
+allow_unused_imports: true
 
 generate:
   go_options:
-    import_path: "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"
+    import_path: "services"
     extra_modifiers:
       google/api/annotations.proto: google.golang.org/genproto/googleapis/api/annotations
       google/api/http.proto: google.golang.org/genproto/googleapis/api/annotations

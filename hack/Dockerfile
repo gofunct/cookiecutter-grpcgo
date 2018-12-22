@@ -1,9 +1,8 @@
-ARG alpine=3.8
 ARG go=1.11.0
 ARG grpc
 ARG grpc_java
 
-FROM golang:$go-alpine$alpine AS build
+FROM golang:1.11.4-alpine3.7
 
 # TIL docker arg variables need to be redefined in each build stage
 ARG grpc
@@ -22,25 +21,26 @@ RUN set -ex && apk --update --no-cache add \
     git \
     openjdk8-jre \
     libstdc++ \
+    libc6-compat \
     ca-certificates
 
-WORKDIR /tmp
-COPY all/install-protobuf.sh /tmp
-RUN chmod +x /tmp/install-protobuf.sh
-RUN /tmp/install-protobuf.sh ${grpc} ${grpc_java}
+COPY all/install-protobuf.sh /hack
+RUN chmod +x /hack/install-protobuf.sh
+RUN /hack/install-protobuf.sh ${grpc} ${grpc_java}
+
+WORKDIR /go
 RUN git clone https://github.com/googleapis/googleapis
 
 RUN curl -sSL https://github.com/uber/prototool/releases/download/v1.3.0/prototool-$(uname -s)-$(uname -m) \
     -o /usr/local/bin/prototool && \
     chmod +x /usr/local/bin/prototool
 
+ENV GOMODULES=on
 # Go get go-related bins
 RUN go get -u google.golang.org/grpc
-
 RUN go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
 RUN go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
 RUN go get -u github.com/golang/protobuf/protoc-gen-go
-
 RUN go get -u github.com/gogo/protobuf/protoc-gen-gogo
 RUN go get -u github.com/gogo/protobuf/protoc-gen-gogofast
 RUN go get -u github.com/gogo/protobuf/protoc-gen-gogoslick
@@ -74,7 +74,7 @@ COPY --from=build /usr/local/include/google/ /usr/local/include/google
 COPY --from=build /usr/local/bin/prototool /usr/local/bin/prototool
 COPY --from=build /go/bin/* /usr/local/bin/
 COPY --from=build /tmp/grpc_web_plugin /usr/local/bin/grpc_web_plugin
-
+COPY --from=build /go/src/* /vendor
 COPY --from=build /go/src/github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger/options/ /usr/local/include/protoc-gen-swagger/options/
 
 ADD all/entrypoint.sh /usr/local/bin

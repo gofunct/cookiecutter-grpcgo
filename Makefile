@@ -13,7 +13,7 @@ debug: ## rebuild the example grpclab project from scratch
 	cd ../grpclab; rm -rf *
 	cd ../grpclab; cookiecutter --no-input -v https://github.com/gofunct/cookiecutter-grpcgo.git
 	cd ../grpclab; mv grpclab/* . && rm -rf grpclab
-	cd ../grpclab && export GOMODULES=on && make proto-files
+	cd ../grpclab && export GOMODULES=on && make protofiles
 
 build-docker:
 	cd hack; make build
