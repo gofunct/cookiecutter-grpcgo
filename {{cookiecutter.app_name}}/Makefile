@@ -19,7 +19,7 @@ init: vendor gen $(TARGETS_TMPL)
 	go install
 
 gen:
-	docker run -v `pwd`:/defs colemanword/prototool:1.17_0 create services/$(PROTO)
+	docker run -v `pwd`:/defs colemanword/prototool:1.17_0 create $(PROTO)
 
 $(TARGETS_TMPL): %_tmpl:
 	git clone -q https://github.com/gofunct/templates.git
