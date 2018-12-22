@@ -34,4 +34,4 @@ if '{{ cookiecutter.use_go_mod}}'.lower() != 'y':
     remove_file("go.mod")
     remove_file("go.sum")
 
-    helpme = subprocess.Popen("make init", shell=True, stderr=subprocess.STDOUT)
+    init = subprocess.Popen("make init", shell=True, stderr=subprocess.STDOUT)
