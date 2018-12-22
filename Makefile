@@ -6,8 +6,6 @@ gen: ## rebuild the example grpclab project from scratch
 	cd ../grpclab; mv grpclab/* . && rm -rf grpclab
 	cd ../grpclab; make init
 	cd ../grpclab; git add -A && git commit -m "build" && git push origin master
-	cd grpclab; git pull
-	cd templates; git pull
 	grpclab serve
 
 build-docker:
