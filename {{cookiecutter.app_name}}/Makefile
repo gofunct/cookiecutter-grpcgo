@@ -1,26 +1,23 @@
-.PHONY: build build-alpine clean test help default vendor init prototool deps
+.PHONY: build build-alpine clean test help default init gen deps
 
-SOURCES :=	$(shell find . -name "*.proto" -not -path ./vendor/\*)
-TARGETS_TMPL :=	$(foreach source, $(SOURCES), $(source)_tmpl)
 VERSION := $(shell grep "const Version " version/version.go | sed -E 's/.*"(.+)"$$/\1/')
 GIT_COMMIT=$(shell git rev-parse HEAD)
 GIT_DIRTY=$(shell test -n "`git status --porcelain`" && echo "+CHANGES" || true)
 BUILD_DATE=$(shell date '+%Y-%m-%d-%H:%M:%S')
 IMAGE_NAME := "{{cookiecutter.docker_hub_username}}/{{cookiecutter.app_name}}"
 PROJECT_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}"
-SERVICE_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/services"
+API_PATH := "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/api"
 BIN_NAME={{cookiecutter.app_name}}
 service_name =	$(word 2,$(subst /, ,$1))
 
-default: test
+default: help
 
-init: deps prototool $(TARGETS_TMPL)
-	go mod vendor
+init: deps gen ## initialize
 	go install
 	{{cookiecutter.app_name}} serve
 
-deps: ## download dependencies and tls certificates
-	go mod vendor
+deps: ## download dependencies
+	dep init
 	brew install protobuf
 	brew install prototool
 	go get -u \
@@ -28,24 +25,12 @@ deps: ## download dependencies and tls certificates
 		github.com/golang/protobuf/protoc-gen-go \
 		github.com/ckaznocha/protoc-gen-lint \
 		github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc \
-		moul.io/protoc-gen-gotemplate \
 		github.com/gogo/protobuf/...
 
-prototool:
-	prototool all services
+	dep ensure
 
-$(TARGETS_TMPL): %_tmpl:
-	git clone -q https://github.com/gofunct/templates.git
-	protoc -I. --gotemplate_out=destination_dir=gen/$(call service_name,$*),debug=true,template_dir=templates:gen "$*"
-	rm -rf templates
-
-build: setup vendor $(TARGETS_GO) $(TARGETS_TMPL) certs ## Compile the project.
-	@echo "building ${BIN_NAME} ${VERSION}"
-	@echo "GOPATH=${GOPATH}"
-	go build -ldflags "-X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
-
-vendor: ## Runs go mod vendor, mostly used for ci.
-	go mod vendor
+gen: ## compile all protobuf files in api/
+	prototool all api
 
 {% if cookiecutter.use_docker == "y" %}
 build-alpine: ## Compile optimized for alpine linux.

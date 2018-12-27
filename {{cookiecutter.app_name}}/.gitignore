@@ -1,0 +1,4 @@
+*.so
+/vendor
+/.idea
+/tmp

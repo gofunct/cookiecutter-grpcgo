@@ -1,0 +1,40 @@
+protoc:
+  version: 3.6.1
+  includes:
+  - /usr/local/include
+  - ./bin
+
+  allow_unused_imports: true
+
+generate:
+  go_options:
+    import_path: github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/api
+    extra_modifiers:
+      google/protobuf/empty.proto: github.com/golang/protobuf/ptypes/empty
+      google/api/annotations.proto: google.golang.org/genproto/googleapis/api/annotations
+      google/api/http.proto: google.golang.org/genproto/googleapis/api/annotations
+  plugins:
+  - name: ts
+    output: api/js
+    flags: service=true
+  - name: js
+    output: api/js
+    flags: binary,import_style=commonjs
+  - name: gogoslick
+    type: gogo
+    flags: plugins=grpc
+    output: api
+  - name: grpc-gateway
+    type: go
+    output: api
+  - name: doc
+    output: api
+  - name: swagger
+      flags: logtostderr=true
+      output: api
+
+lint:
+  rules:
+    remove:
+    - REQUEST_RESPONSE_TYPES_IN_SAME_FILE
+    - REQUEST_RESPONSE_TYPES_UNIQUE

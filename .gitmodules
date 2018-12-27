@@ -1,6 +1,0 @@
-[submodule "grpclab"]
-	path = grpclab
-	url = ../grpclab/
-[submodule "templates"]
-	path = templates
-	url = ../templates/

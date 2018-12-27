@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+package {{cookiecutter.app_name}};
+
+option go_package = "github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/api;api_pb";
+
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+service {{cookiecutter.service}}Service {
+  rpc List{{cookiecutter.service}}s (List{{cookiecutter.service}}sRequest) returns (List{{cookiecutter.service}}sResponse) {
+    option (google.api.http) = {
+      get: "/users"
+    };
+  }
+  rpc Get{{cookiecutter.service}} (Get{{cookiecutter.service}}Request) returns ({{cookiecutter.service}}) {
+    option (google.api.http) = {
+      get: "/users/{user_id}"
+    };
+  }
+  rpc Create{{cookiecutter.service}} (Create{{cookiecutter.service}}Request) returns ({{cookiecutter.service}}) {
+    option (google.api.http) = {
+      post: "/users"
+      body: "user"
+    };
+  }
+  rpc Update{{cookiecutter.service}} (Update{{cookiecutter.service}}Request) returns ({{cookiecutter.service}}) {
+    option (google.api.http) = {
+      patch: "/users/{user.user_id}"
+      body: "user"
+    };
+  }
+  rpc Delete{{cookiecutter.service}} (Delete{{cookiecutter.service}}Request) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      delete: "/users/{user_id}"
+    };
+  }
+}
+
+message {{cookiecutter.service}} {
+  string {{cookiecutter.service}}_id = 1;
+}
+
+message List{{cookiecutter.service}}sRequest {
+}
+
+message List{{cookiecutter.service}}sResponse {
+  repeated {{cookiecutter.service}} users = 1;
+}
+
+message Get{{cookiecutter.service}}Request {
+  string user_id = 1;
+}
+
+message Create{{cookiecutter.service}}Request {
+  {{cookiecutter.service}} user = 1;
+}
+
+message Update{{cookiecutter.service}}Request {
+  {{cookiecutter.service}} user = 1;
+}
+
+message Delete{{cookiecutter.service}}Request {
+  string user_id = 1;
+}

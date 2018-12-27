@@ -31,25 +31,24 @@ func Execute() {
         }
 }
 
-func GetConfig() *viper.Viper {
-        return defaultConfig
-}
-
-func GetKitLogger() kitlog.Logger {
-        return kitLog
-}
-
 func Init() {
         {
                 log.SetOutput(kitlog.NewStdlibAdapter(kitLog))
                 log.Println("new json logger registered")
         }
+
+        {
+                rootCmd.AddCommand(versionCmd)
+                rootCmd.AddCommand(serveCmd)
+        }
+
         {
                 defaultConfig = viper.New()
                 defaultConfig.AutomaticEnv()
                 defaultConfig.AddConfigPath(os.Getenv("$HOME")) // name of config file (without extension)
                 defaultConfig.AddConfigPath(".")
                 defaultConfig.SetEnvPrefix("{{cookiecutter.app_name}}")
+                defaultConfig.SetDefault("service", "{{cookiecutter.service}}")
                 defaultConfig.SetDefault("viper_config_name", "{{cookiecutter.viper_config_name}}")
                 defaultConfig.SetDefault("full_name", "{{cookiecutter.full_name}}")
                 defaultConfig.SetDefault("github_username", "{{cookiecutter.github_username}}")
@@ -60,8 +59,7 @@ func Init() {
                 defaultConfig.SetDefault("docker_build_image_version", "{{cookiecutter.docker_build_image_version}}")
                 defaultConfig.SetDefault("json_logs", "{{cookiecutter.json_logs}}")
                 defaultConfig.SetDefault("log_level", "{{cookiecutter.log_level}}")
-                defaultConfig.SetDefault("grpc_port", "{{cookiecutter.grpc_port}}")
-                defaultConfig.SetDefault("http_port", "{{cookiecutter.http_port}}")
+                defaultConfig.SetDefault("lis_port", "{{cookiecutter.lis_port}}")
         }
 
         // If a config file is found, read it in.
