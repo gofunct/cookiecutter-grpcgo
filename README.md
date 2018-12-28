@@ -58,8 +58,7 @@ Select docker_build_image_version:
 3 - 1.9.7
 Choose from 1, 2, 3 [1]: 
 viper_config_name [config]: 
-grpc_port [9090]: 
-http_port [8080]: 
+lis_port [8080]: 
 log_level [debug]: 
 json_logs [y]: 
 use_docker [y]: 
