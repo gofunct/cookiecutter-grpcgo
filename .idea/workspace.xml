@@ -26,12 +26,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Dockerfile" value="10" />
+          <entry key="Dockerfile" value="11" />
           <entry key="LICENSE" value="2" />
           <entry key="Makefile" value="32" />
           <entry key="gitignore" value="11" />
           <entry key="gitmodules" value="2" />
-          <entry key="go" value="123" />
+          <entry key="go" value="124" />
           <entry key="golden" value="2" />
           <entry key="ini" value="2" />
           <entry key="json" value="9" />
@@ -46,7 +46,7 @@
           <entry key="tmpl" value="19" />
           <entry key="toml" value="5" />
           <entry key="txt" value="7" />
-          <entry key="yaml" value="18" />
+          <entry key="yaml" value="19" />
           <entry key="yml" value="2" />
         </counts>
       </usages-collector>
@@ -54,27 +54,27 @@
         <counts>
           <entry key="Bash" value="12" />
           <entry key="DTD" value="9" />
-          <entry key="Dockerfile" value="10" />
+          <entry key="Dockerfile" value="11" />
           <entry key="Git file" value="7" />
-          <entry key="Go" value="117" />
+          <entry key="Go" value="118" />
           <entry key="JSON" value="9" />
           <entry key="Makefile" value="32" />
           <entry key="Markdown" value="15" />
           <entry key="PLAIN_TEXT" value="57" />
           <entry key="PROTO" value="23" />
           <entry key="Python" value="3" />
-          <entry key="YAML" value="20" />
+          <entry key="YAML" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Dockerfile" value="412" />
+          <entry key="Dockerfile" value="416" />
           <entry key="LICENSE" value="12" />
           <entry key="Makefile" value="2126" />
           <entry key="gitignore" value="47" />
           <entry key="go" value="2256" />
           <entry key="json" value="590" />
-          <entry key="md" value="335" />
+          <entry key="md" value="340" />
           <entry key="mod" value="27" />
           <entry key="proto" value="350" />
           <entry key="py" value="341" />
@@ -87,12 +87,12 @@
         <counts>
           <entry key="Bash" value="59" />
           <entry key="DTD" value="27" />
-          <entry key="Dockerfile" value="412" />
+          <entry key="Dockerfile" value="416" />
           <entry key="Git file" value="8" />
           <entry key="Go" value="2256" />
           <entry key="JSON" value="590" />
           <entry key="Makefile" value="2126" />
-          <entry key="Markdown" value="335" />
+          <entry key="Markdown" value="340" />
           <entry key="PLAIN_TEXT" value="95" />
           <entry key="PROTO" value="350" />
           <entry key="Python" value="341" />
@@ -107,12 +107,12 @@
         <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="126" lean-forward="true" selection-end-line="9" selection-end-column="126" />
+              <caret line="9" column="126" selection-end-line="9" selection-end-column="126" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cookiecutter.json">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -134,10 +134,22 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="423">
-                <caret line="74" lean-forward="true" selection-end-line="74" />
+              <first_editor relative-caret-position="915">
+                <caret line="61" selection-start-line="61" selection-end-line="61" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/api/service.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#13#111#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,28 +158,16 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="218">
-              <caret line="33" column="5" lean-forward="true" selection-end-line="33" selection-end-column="5" />
+              <caret line="33" column="5" selection-end-line="33" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/prototool.yaml">
+        <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="61" lean-forward="true" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hooks/post_gen_project.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="33" lean-forward="true" selection-end-line="33" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -194,7 +194,7 @@
         <entry file="file://$PROJECT_DIR$/tests/test_cookiecutter_generation.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="392">
-              <caret line="75" column="22" lean-forward="true" selection-end-line="75" selection-end-column="22" />
+              <caret line="75" column="22" selection-end-line="75" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -230,6 +230,7 @@
       <find>interface</find>
       <find>grapiserver</find>
       <find>User</find>
+      <find>grpc_port</find>
     </findStrings>
     <replaceStrings>
       <replace>github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}</replace>
@@ -249,9 +250,9 @@
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/user/gen</dir>
-      <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/hack</dir>
       <dir>$PROJECT_DIR$/{{cookiecutter.app_name}}</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="GOROOT" path="/usr/local/opt/go/libexec" />
@@ -264,8 +265,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grpclab/cmd/serve.go" />
-        <option value="$PROJECT_DIR$/grpclab/gen/user/server/server.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/store.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/store/token.go" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/go.mod" />
@@ -315,6 +314,8 @@
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Makefile" />
         <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/api/user.proto" />
         <option value="$PROJECT_DIR$/hooks/post_gen_project.py" />
+        <option value="$PROJECT_DIR$/{{cookiecutter.app_name}}/Dockerfile" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -366,11 +367,6 @@
               <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="cookiecutter-grpcgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cookiecutter-grpcgo" type="462c0819:PsiDirectoryNode" />
-              <item name="{{cookiecutter.app_name}}" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -421,9 +417,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2936508" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2936508" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -436,7 +431,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.328125" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.328125" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -469,7 +464,6 @@
     <proxy>direct</proxy>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Gopkg.toml" />
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Gopkg.lock" />
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/vendor/gopkg.in/yaml.v2/go.mod" />
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/proto_ext/gotmpl/helpers.go" />
@@ -487,13 +481,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.yaml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/temp/grpclab/Makefile">
       <provider selected="true" editor-type-id="text-editor">
@@ -685,16 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/api/service.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#13#111#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/api/user.proto">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
@@ -715,7 +692,7 @@
     <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/prototool.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="61" lean-forward="true" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="86" />
+          <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="86" />
         </state>
       </provider>
     </entry>
@@ -736,7 +713,7 @@
     <entry file="file://$PROJECT_DIR$/tests/test_cookiecutter_generation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
-          <caret line="75" column="22" lean-forward="true" selection-end-line="75" selection-end-column="22" />
+          <caret line="75" column="22" selection-end-line="75" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -747,27 +724,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="423">
-            <caret line="74" lean-forward="true" selection-end-line="74" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
-          <caret line="33" column="5" lean-forward="true" selection-end-line="33" selection-end-column="5" />
+          <caret line="33" column="5" selection-end-line="33" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="126" lean-forward="true" selection-end-line="9" selection-end-column="126" />
+          <caret line="9" column="126" selection-end-line="9" selection-end-column="126" />
         </state>
       </provider>
     </entry>
@@ -775,6 +742,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grpclab/prototool.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="915">
+            <caret line="61" selection-start-line="61" selection-end-line="61" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/{{cookiecutter.app_name}}/api/service.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#13#111#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
